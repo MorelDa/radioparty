@@ -1,0 +1,30 @@
+{
+  "slider_principal": [
+    "https://img.freepik.com/foto-gratis/vista-frontal-mujer-escuchando-musica_23-2148597018.jpg",
+    "https://img.freepik.com/fotos-premium/cerca-hermosa-morena-escuchando-musica_13339-297157.jpg",
+    ""
+  ],
+  "youtube_url": "",
+  "redes": {
+    "instagram": "https://www.instagram.com/djkevin_inthemix?igsh=YzFhZDgwZnN3Nm5u",
+    "tiktok": "https://www.facebook.com/share/8MbfBzJKXnirLzYx/",
+    "whatsapp": "https://www.google.com/search?q=https://wa.me/34604875068"
+  },
+  "secciones": [
+    {
+      "nombre": "Novedades",
+      "sub": "Music",
+      "items": []
+    },
+    {
+      "nombre": "Ranking",
+      "sub": "Party",
+      "items": []
+    },
+    {
+      "nombre": "Sobre",
+      "sub": "Nosotros",
+      "items": []
+    }
+  ]
+}
