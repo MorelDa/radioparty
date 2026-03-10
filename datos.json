@@ -1,7 +1,8 @@
 {
   "slider_principal": [
-    "https://img.freepik.com/foto-gratis/vista-frontal-mujer-escuchando-musica_23-2148597018.jpg",
-    "https://img.freepik.com/fotos-premium/cerca-hermosa-morena-escuchando-musica_13339-297157.jpg"
+    "https://img.freepik.com/fotos-premium/cerca-hermosa-morena-escuchando-musica_13339-297157.jpg",
+    "https://img.freepik.com/foto-gratis/vista-frontal-mujer-sosteniendo-radio_23-2148605858.jpg",
+    "https://img.freepik.com/fotos-premium/encantadora-mujer-sonriente-diadema-sosteniendo-retro-tape-player-mirando-lado-aislado-sobre-pared-rosa_171337-110129.jpg"
   ],
   "youtube_url": "",
   "redes": {
@@ -24,8 +25,13 @@
       "sub": "Nosotros",
       "items": [
         {
-          "titulo": "djkevin",
+          "titulo": "DJ KEVIN",
           "img": "https://i.postimg.cc/xTBrN1Fv/Mesa-de-trabajo-1.png",
+          "url": "#"
+        },
+        {
+          "titulo": "NUESTRA SEDE",
+          "img": "https://i.postimg.cc/kX7Pdgp3/N.png",
           "url": "#"
         }
       ]
