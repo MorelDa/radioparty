@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Radio Party Valencia | Web Oficial</title>
+    <title>Radio Party Valencia | Oficial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,58 +11,22 @@
     <style>
         :root { --pink: #ff2d55; --bg: #ffffff; --text: #1a1a1a; --card: #f8f8f8; --border: rgba(0,0,0,0.08); }
         body.dark-mode { --bg: #0d0d0d; --text: #ffffff; --card: #1a1a1a; --border: rgba(255,255,255,0.1); }
-        
         body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; margin: 0; transition: 0.3s; overflow-x: hidden; }
         .nexa { text-transform: uppercase; font-weight: 900; letter-spacing: -2px; line-height: 0.8; }
-        
         .mode-toggle { position: fixed; top: 20px; right: 20px; z-index: 3000; width: 45px; height: 45px; border-radius: 50%; background: var(--pink); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 15px rgba(255,45,85,0.3); }
-
-        /* Slider Superior */
-        .hero { 
-            width: 100%; height: 65vh; position: relative; 
-            mask-image: linear-gradient(to bottom, black 75%, transparent 100%); 
-            -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%); 
-        }
+        .hero { width: 100%; height: 65vh; position: relative; mask-image: linear-gradient(to bottom, black 75%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%); }
         .hero img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-
-        /* Cabecera */
         .header-main { position: relative; margin-top: -140px; padding: 0 6%; display: flex; align-items: center; justify-content: center; gap: 20px; z-index: 100; }
-        .heart-box { 
-            width: 155px; height: 155px; border-radius: 2.8rem; border: 6px solid white; 
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15); overflow: hidden; background: white; flex-shrink: 0; 
-        }
-        
-        @media (min-width: 1024px) {
-            .hero { height: 80vh; }
-            .header-main { margin-top: -240px; gap: 60px; }
-            .nexa { font-size: 110px !important; }
-            .heart-box { width: 420px; height: 420px; border-radius: 5.5rem; border: 15px solid white; }
-        }
-
-        /* Títulos de bloque: Tamaño Recomendado (32px en PC, 24px en Móvil) */
-        .block-title { 
-            font-size: 24px; 
-            font-weight: 900; 
-            text-transform: uppercase; 
-            margin-bottom: 25px; 
-            padding-left: 15px;
-            border-left: 6px solid var(--pink);
-            display: block;
-        }
+        .heart-box { width: 155px; height: 155px; border-radius: 2.8rem; border: 6px solid white; box-shadow: 0 20px 45px rgba(0,0,0,0.15); overflow: hidden; background: white; flex-shrink: 0; }
+        @media (min-width: 1024px) { .hero { height: 80vh; } .header-main { margin-top: -240px; gap: 60px; } .nexa { font-size: 110px !important; } .heart-box { width: 420px; height: 420px; border-radius: 5.5rem; border: 15px solid white; } }
+        .block-title { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 25px; padding-left: 15px; border-left: 6px solid var(--pink); display: block; }
         @media (min-width: 1024px) { .block-title { font-size: 32px; } }
-
-        /* Tarjetas de Bloques */
         .card { background: var(--card); border-radius: 2.2rem; padding: 15px; border: 1px solid var(--border); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: var(--pink); }
         .card img { border-radius: 1.8rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
-        
-        /* Botones Redes */
-        .btn-red { padding: 15px 35px; border-radius: 50px; font-weight: 900; text-transform: uppercase; font-size: 12px; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; }
+        .btn-red { padding: 15px 35px; border-radius: 50px; font-weight: 900; text-transform: uppercase; font-size: 12px; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
         .btn-ig { background: #000; color: #fff; }
         body.dark-mode .btn-ig { background: #fff; color: #000; }
         .btn-wa { background: #25D366; color: #fff; }
-
-        /* Player Bar */
         .player-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 18px 30px; z-index: 2000; display: flex; align-items: center; justify-content: space-between; border-top: 5px solid var(--pink); color: white; }
     </style>
 </head>
@@ -70,9 +34,7 @@
 
     <button class="mode-toggle" id="mode-btn"><i class="fas fa-moon"></i></button>
 
-    <audio id="audio-player" preload="none" crossorigin="anonymous">
-        <source src="https://miestacion.turadioonline.com.ar/8286/stream" type="audio/mpeg">
-    </audio>
+    <audio id="main-stream" crossorigin="anonymous"></audio>
 
     <div class="hero">
         <div class="swiper main-swiper h-full w-full">
@@ -91,8 +53,7 @@
         </div>
     </header>
 
-    <main id="web-content" class="pb-48 pt-16 px-6 max-w-7xl mx-auto">
-        </main>
+    <main id="web-content" class="pb-48 pt-16 px-6 max-w-7xl mx-auto"></main>
 
     <div class="player-bar">
         <div class="flex items-center gap-4">
@@ -105,33 +66,47 @@
                 </div>
             </div>
         </div>
-        <button id="play-btn" class="bg-[#ff2d55] w-14 h-14 rounded-full text-white text-2xl flex items-center justify-center hover:scale-105 transition">
+        <button id="play-btn" class="bg-[#ff2d55] w-14 h-14 rounded-full text-white text-2xl flex items-center justify-center">
             <i class="fas fa-play" id="play-icon"></i>
         </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const audio = document.getElementById('audio-player');
+        const audio = document.getElementById('main-stream');
         const playBtn = document.getElementById('play-btn');
         const playIcon = document.getElementById('play-icon');
-        const modeBtn = document.getElementById('mode-btn');
+        const streamUrl = "https://miestacion.turadioonline.com.ar/8286/stream";
 
-        modeBtn.onclick = () => {
-            document.body.classList.toggle('dark-mode');
-            modeBtn.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        };
-
-        playBtn.onclick = () => {
+        // LÓGICA DE AUDIO REFORZADA
+        playBtn.addEventListener('click', () => {
             if (audio.paused) {
-                audio.load(); audio.play();
-                playIcon.className = 'fas fa-pause';
-                document.getElementById('status-tag').innerText = "EN DIRECTO";
+                // Forzar carga limpia para evitar caché del stream
+                audio.src = streamUrl + "?t=" + Date.now();
+                audio.load();
+                
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        playIcon.className = 'fas fa-pause';
+                        document.getElementById('status-tag').innerText = "REPRODUCIENDO";
+                    }).catch(error => {
+                        console.log("Error al reproducir: ", error);
+                        document.getElementById('status-tag').innerText = "TOCA DE NUEVO";
+                    });
+                }
             } else {
                 audio.pause();
+                audio.src = ""; // Cortamos la descarga de datos
                 playIcon.className = 'fas fa-play';
                 document.getElementById('status-tag').innerText = "PAUSADO";
             }
+        });
+
+        // Cambio de Modo
+        document.getElementById('mode-btn').onclick = () => {
+            document.body.classList.toggle('dark-mode');
+            document.getElementById('mode-btn').innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         };
 
         async function loadData() {
@@ -139,30 +114,24 @@
                 const res = await fetch('datos.json?v=' + Math.random());
                 const data = await res.json();
 
-                // Slider Superior
                 if (data.slider_principal && data.slider_principal.length > 0) {
                     document.getElementById('slider-target').innerHTML = data.slider_principal.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
                     new Swiper('.main-swiper', { loop: true, effect: 'fade', autoplay: { delay: 4500 } });
                 }
 
                 let html = '';
-                
-                // Pintar Secciones de datos.json
                 data.secciones.forEach((sec, index) => {
                     if (sec.items && sec.items.length > 0) {
-                        html += `
-                        <div class="mt-20">
+                        html += `<div class="mt-20">
                             <h2 class="block-title">${sec.nombre} <span class="text-[#ff2d55]">${sec.sub}</span></h2>
                             <div class="swiper item-slider-${index} !overflow-visible">
                                 <div class="swiper-wrapper">
                                     ${sec.items.map(item => `
                                         <div class="swiper-slide" style="width:260px">
-                                            <div class="card">
-                                                <a href="${item.url}" target="_blank">
-                                                    <img src="${item.img}">
-                                                    <p class="mt-4 text-center text-[12px] font-black uppercase truncate">${item.titulo}</p>
-                                                </a>
-                                            </div>
+                                            <div class="card"><a href="${item.url}" target="_blank">
+                                                <img src="${item.img}">
+                                                <p class="mt-4 text-center text-[12px] font-black uppercase truncate">${item.titulo}</p>
+                                            </a></div>
                                         </div>
                                     `).join('')}
                                 </div>
@@ -171,9 +140,7 @@
                     }
                 });
 
-                // Bloque de Redes Sociales con Título Propio
-                html += `
-                <div class="mt-24 mb-10 text-center">
+                html += `<div class="mt-24 mb-10 text-center">
                     <h2 class="block-title !border-none !padding-0 text-center">Nuestras <span>Redes</span></h2>
                     <div class="flex flex-wrap justify-center gap-6 mt-8">
                         ${data.redes.instagram ? `<a href="${data.redes.instagram}" target="_blank" class="btn-red btn-ig"><i class="fab fa-instagram text-xl"></i> Instagram</a>` : ''}
@@ -182,13 +149,10 @@
                 </div>`;
 
                 document.getElementById('web-content').innerHTML = html;
-                
-                // Init Sliders
                 data.secciones.forEach((_, index) => {
                     new Swiper(`.item-slider-${index}`, { slidesPerView: 'auto', spaceBetween: 25, freeMode: true });
                 });
-
-            } catch (err) { console.log("Revisa tu datos.json"); }
+            } catch (err) {}
         }
 
         async function updateMeta() {
