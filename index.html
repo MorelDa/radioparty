@@ -14,26 +14,55 @@
         body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; margin: 0; transition: 0.3s; overflow-x: hidden; }
         .nexa { text-transform: uppercase; font-weight: 900; letter-spacing: -2px; line-height: 0.8; }
         .mode-toggle { position: fixed; top: 20px; right: 20px; z-index: 3000; width: 45px; height: 45px; border-radius: 50%; background: var(--pink); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 15px rgba(255,45,85,0.3); }
+        
         .hero { width: 100%; height: 65vh; position: relative; mask-image: linear-gradient(to bottom, black 75%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%); }
         .hero img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+        
         .header-main { position: relative; margin-top: -140px; padding: 0 6%; display: flex; align-items: center; justify-content: center; gap: 20px; z-index: 100; }
         .heart-box { width: 155px; height: 155px; border-radius: 2.8rem; border: 6px solid white; box-shadow: 0 20px 45px rgba(0,0,0,0.15); overflow: hidden; background: white; flex-shrink: 0; }
-        @media (min-width: 1024px) { .hero { height: 80vh; } .header-main { margin-top: -240px; gap: 60px; } .nexa { font-size: 110px !important; } .heart-box { width: 420px; height: 420px; border-radius: 5.5rem; border: 15px solid white; } }
-        .block-title { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 25px; padding-left: 15px; border-left: 6px solid var(--pink); display: block; }
-        @media (min-width: 1024px) { .block-title { font-size: 32px; } }
+        
+        @media (min-width: 1024px) { 
+            .hero { height: 80vh; } 
+            .header-main { margin-top: -240px; gap: 60px; } 
+            .nexa { font-size: 110px !important; } 
+            .heart-box { width: 420px; height: 420px; border-radius: 5.5rem; border: 15px solid white; } 
+        }
+
+        /* TÍTULOS CENTRADOS */
+        .block-title { 
+            font-size: 26px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            margin-bottom: 35px; 
+            text-align: center;
+            display: block;
+            position: relative;
+        }
+        .block-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 5px;
+            background: var(--pink);
+            margin: 10px auto 0;
+            border-radius: 10px;
+        }
+        @media (min-width: 1024px) { .block-title { font-size: 38px; } }
+
         .card { background: var(--card); border-radius: 2.2rem; padding: 15px; border: 1px solid var(--border); transition: 0.3s; }
         .card img { border-radius: 1.8rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+        
         .btn-red { padding: 15px 35px; border-radius: 50px; font-weight: 900; text-transform: uppercase; font-size: 12px; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
         .btn-ig { background: #000; color: #fff; }
         body.dark-mode .btn-ig { background: #fff; color: #000; }
         .btn-wa { background: #25D366; color: #fff; }
+        
         .player-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 18px 30px; z-index: 2000; display: flex; align-items: center; justify-content: space-between; border-top: 5px solid var(--pink); color: white; }
     </style>
 </head>
 <body>
 
     <button class="mode-toggle" id="mode-btn"><i class="fas fa-moon"></i></button>
-
     <audio id="main-stream" crossorigin="anonymous"></audio>
 
     <div class="hero">
@@ -78,32 +107,23 @@
         const playIcon = document.getElementById('play-icon');
         const streamUrl = "https://miestacion.turadioonline.com.ar/8286/stream";
 
-        // LÓGICA DE AUDIO REFORZADA
         playBtn.addEventListener('click', () => {
             if (audio.paused) {
-                // Forzar carga limpia para evitar caché del stream
                 audio.src = streamUrl + "?t=" + Date.now();
                 audio.load();
-                
-                const playPromise = audio.play();
-                if (playPromise !== undefined) {
-                    playPromise.then(() => {
-                        playIcon.className = 'fas fa-pause';
-                        document.getElementById('status-tag').innerText = "REPRODUCIENDO";
-                    }).catch(error => {
-                        console.log("Error al reproducir: ", error);
-                        document.getElementById('status-tag').innerText = "TOCA DE NUEVO";
-                    });
-                }
+                audio.play().then(() => {
+                    playIcon.className = 'fas fa-pause';
+                    document.getElementById('status-tag').innerText = "REPRODUCIENDO";
+                }).catch(() => {
+                    document.getElementById('status-tag').innerText = "TOCA DE NUEVO";
+                });
             } else {
-                audio.pause();
-                audio.src = ""; // Cortamos la descarga de datos
+                audio.pause(); audio.src = "";
                 playIcon.className = 'fas fa-play';
                 document.getElementById('status-tag').innerText = "PAUSADO";
             }
         });
 
-        // Cambio de Modo
         document.getElementById('mode-btn').onclick = () => {
             document.body.classList.toggle('dark-mode');
             document.getElementById('mode-btn').innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
@@ -114,7 +134,7 @@
                 const res = await fetch('datos.json?v=' + Math.random());
                 const data = await res.json();
 
-                if (data.slider_principal && data.slider_principal.length > 0) {
+                if (data.slider_principal) {
                     document.getElementById('slider-target').innerHTML = data.slider_principal.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
                     new Swiper('.main-swiper', { loop: true, effect: 'fade', autoplay: { delay: 4500 } });
                 }
@@ -141,7 +161,7 @@
                 });
 
                 html += `<div class="mt-24 mb-10 text-center">
-                    <h2 class="block-title !border-none !padding-0 text-center">Nuestras <span>Redes</span></h2>
+                    <h2 class="block-title">Nuestras <span class="text-[#ff2d55]">Redes</span></h2>
                     <div class="flex flex-wrap justify-center gap-6 mt-8">
                         ${data.redes.instagram ? `<a href="${data.redes.instagram}" target="_blank" class="btn-red btn-ig"><i class="fab fa-instagram text-xl"></i> Instagram</a>` : ''}
                         ${data.redes.whatsapp ? `<a href="${data.redes.whatsapp}" target="_blank" class="btn-red btn-wa"><i class="fab fa-whatsapp text-xl"></i> WhatsApp</a>` : ''}
