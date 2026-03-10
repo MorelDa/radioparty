@@ -8,41 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
     <style>
-        :root { --pink: #ff2d55; --bg: #ffffff; --text: #1a1a1a; --card: #f9f9f9; }
-        body.dark-mode { --bg: #0a0a0a; --text: #ffffff; --card: #181818; }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; transition: 0.5s; overflow-x: hidden; }
-        
-        .nexa-heavy { line-height: 0.8; letter-spacing: -2px; text-transform: uppercase; font-weight: 900; }
-        
-        /* Efecto Slider Superior */
-        .hero-container { width: 100%; height: 60vh; position: relative; mask-image: linear-gradient(to bottom, black 70%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); }
-        .hero-container img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Cabecera Flotante */
+        body { background: #0a0a0a; color: white; font-family: 'Montserrat', sans-serif; margin: 0; overflow-x: hidden; }
+        .nexa { text-transform: uppercase; font-weight: 900; letter-spacing: -2px; line-height: 0.8; }
+        .hero { width: 100%; height: 50vh; mask-image: linear-gradient(to bottom, black 70%, transparent 100%); }
+        .hero img { width: 100%; height: 100%; object-fit: cover; }
         .header-main { position: relative; margin-top: -100px; padding: 0 20px; display: flex; align-items: center; justify-content: center; gap: 15px; z-index: 100; }
         .heart-box { width: 140px; height: 140px; border-radius: 2.5rem; border: 6px solid white; box-shadow: 0 15px 40px rgba(255,45,85,0.4); overflow: hidden; animation: pulse 2s infinite; background: white; flex-shrink: 0; }
-        
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        @media (min-width: 768px) { .header-main { margin-top: -180px; } .heart-box { width: 380px; height: 380px; border-radius: 5rem; border: 12px solid white; } }
-
-        /* Estilo de Tarjetas */
-        .card { background: var(--card); border-radius: 2rem; padding: 12px; transition: 0.4s; display: block; border: 1px solid rgba(255,45,85,0.1); }
+        .player-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 15px 25px; z-index: 2000; display: flex; align-items: center; justify-content: space-between; border-top: 4px solid #ff2d55; }
+        .card { background: #181818; border-radius: 2rem; padding: 12px; display: block; text-decoration: none; color: inherit; }
         .card img { border-radius: 1.5rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
-        
-        /* Reproductor Inferior */
-        .player-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 15px 25px; z-index: 2000; display: flex; align-items: center; justify-content: space-between; border-top: 4px solid var(--pink); box-shadow: 0 -10px 30px rgba(0,0,0,0.5); }
-        
-        .btn-mode { position: fixed; top: 20px; right: 20px; z-index: 3000; width: 45px; height: 45px; border-radius: 50%; background: var(--pink); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 15px rgba(255,45,85,0.5); }
     </style>
 </head>
-<body class="dark-mode">
+<body>
 
-    <button class="btn-mode" id="btn-mode"><i class="fas fa-sun"></i></button>
+    <audio id="audio-player" preload="none" crossorigin="anonymous">
+        <source src="https://miestacion.turadioonline.com.ar/8286/stream" type="audio/mpeg">
+    </audio>
 
-    <div class="hero-container">
-        <div class="swiper main-slider h-full w-full">
+    <div class="hero">
+        <div class="swiper main-swiper h-full w-full">
             <div class="swiper-wrapper" id="slider-target">
                 <div class="swiper-slide"><img src="https://img.freepik.com/foto-gratis/vista-frontal-mujer-escuchando-musica_23-2148597018.jpg"></div>
             </div>
@@ -50,85 +36,80 @@
     </div>
 
     <header class="header-main">
-        <div class="flex-1"><h1 class="nexa-heavy text-[38px] md:text-[100px]">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1></div>
+        <div class="flex-1"><h1 class="nexa text-[38px] md:text-[90px]">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1></div>
         <div class="heart-box"><img id="radio-art-big" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-full h-full object-cover"></div>
     </header>
 
-    <main id="web-sections" class="pb-40 pt-10">
+    <main id="web-content" class="pb-40 pt-10">
         </main>
 
     <div class="player-bar">
         <div class="flex items-center gap-4">
-            <img id="radio-art-small" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-14 h-14 rounded-xl object-cover border-2 border-white/20">
-            <div class="text-white">
-                <p id="radio-title" class="font-black text-xs uppercase truncate w-32">Radio Party Valencia</p>
-                <div class="flex items-center gap-2">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span></span>
-                    <span class="text-pink-500 text-[10px] font-black uppercase">En Directo</span>
-                </div>
+            <img id="radio-art-small" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-12 h-12 rounded-xl object-cover">
+            <div class="text-white overflow-hidden">
+                <p id="radio-title" class="font-black text-[10px] uppercase truncate w-32">Radio Party Valencia</p>
+                <span id="status-tag" class="text-[#ff2d55] text-[9px] font-black italic">EN DIRECTO</span>
             </div>
         </div>
-        <button id="play-action" class="bg-[#ff2d55] w-14 h-14 rounded-full text-white text-2xl flex items-center justify-center shadow-lg active:scale-90 transition">
-            <i class="fas fa-play" id="icon-play"></i>
+        <button id="play-btn" class="bg-[#ff2d55] w-14 h-14 rounded-full text-white text-2xl flex items-center justify-center shadow-lg active:scale-90 transition-all">
+            <i class="fas fa-play" id="play-icon"></i>
         </button>
     </div>
 
-    <audio id="player-stream" src="https://miestacion.turadioonline.com.ar/8286/stream" crossorigin="anonymous"></audio>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const audio = document.getElementById('player-stream');
-        const playBtn = document.getElementById('play-action');
-        const playIcon = document.getElementById('icon-play');
+        const audio = document.getElementById('audio-player');
+        const playBtn = document.getElementById('play-btn');
+        const playIcon = document.getElementById('play-icon');
+        const statusTag = document.getElementById('status-tag');
 
-        // Función de Play
-        playBtn.onclick = () => {
-            if (audio.paused) { audio.play(); playIcon.className = 'fas fa-pause'; }
-            else { audio.pause(); playIcon.className = 'fas fa-play'; }
-        };
+        // LÓGICA DEL REPRODUCTOR
+        playBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                // Forzamos la carga del stream al dar play
+                statusTag.innerText = "CONECTANDO...";
+                audio.load(); 
+                audio.play().then(() => {
+                    playIcon.className = 'fas fa-pause';
+                    statusTag.innerText = "EN DIRECTO";
+                }).catch(err => {
+                    console.error("Error de reproducción:", err);
+                    statusTag.innerText = "ERROR DE CONEXIÓN";
+                });
+            } else {
+                audio.pause();
+                playIcon.className = 'fas fa-play';
+                statusTag.innerText = "PAUSADO";
+            }
+        });
 
-        // Dark/Light Mode
-        document.getElementById('btn-mode').onclick = () => {
-            document.body.classList.toggle('dark-mode');
-            document.getElementById('btn-mode').innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        };
-
-        // CARGA DESDE DATA.JSON (PANEL)
-        async function initWeb() {
+        // CARGAR DATOS DESDE datos.json
+        async function loadData() {
             try {
-                const response = await fetch('data.json?v=' + Date.now());
-                const data = await response.json();
+                const res = await fetch('datos.json?v=' + Math.random());
+                if (!res.ok) throw new Error();
+                const data = await res.json();
 
-                // 1. Configurar Slider Superior
-                const sliderWrapper = document.getElementById('slider-target');
-                const images = data.slider_principal.filter(url => url.length > 5);
-                
-                if (images.length > 0) {
-                    sliderWrapper.innerHTML = images.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
-                    // Iniciar movimiento del slider
-                    new Swiper('.main-slider', {
-                        loop: true,
-                        effect: 'fade',
-                        autoplay: { delay: 4000, disableOnInteraction: false },
-                        speed: 1000
-                    });
+                // Slider
+                const validSlides = data.slider_principal.filter(url => url.length > 5);
+                if (validSlides.length > 0) {
+                    document.getElementById('slider-target').innerHTML = validSlides.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
+                    new Swiper('.main-swiper', { loop: true, effect: 'fade', autoplay: { delay: 4000 } });
                 }
 
-                let contentHtml = '';
-
-                // 2. Pintar Secciones (Ranking, Novedades, etc)
+                let html = '';
                 data.secciones.forEach(sec => {
                     if (sec.items && sec.items.length > 0) {
-                        contentHtml += `
+                        html += `
                         <div class="mt-12">
-                            <h2 class="text-center nexa-heavy text-2xl mb-6">${sec.nombre} <span class="text-[#ff2d55]">${sec.sub}</span></h2>
-                            <div class="swiper item-slider px-6">
+                            <h2 class="text-center nexa text-2xl mb-6">${sec.nombre} <span class="text-[#ff2d55]">${sec.sub}</span></h2>
+                            <div class="swiper sec-slider px-6">
                                 <div class="swiper-wrapper">
                                     ${sec.items.map(item => `
-                                        <div class="swiper-slide" style="width:230px">
-                                            <a href="${item.url || '#'}" target="_blank" class="card shadow-xl">
-                                                <img src="${item.img || 'https://via.placeholder.com/400'}">
-                                                <p class="mt-4 text-center text-[10px] font-black uppercase tracking-tighter">${item.titulo || 'RADIO PARTY'}</p>
+                                        <div class="swiper-slide" style="width:200px">
+                                            <a href="${item.url}" target="_blank" class="card shadow-xl">
+                                                <img src="${item.img}">
+                                                <p class="mt-3 text-center text-[10px] font-bold uppercase truncate">${item.titulo}</p>
                                             </a>
                                         </div>
                                     `).join('')}
@@ -138,33 +119,21 @@
                     }
                 });
 
-                // 3. Redes Sociales
-                contentHtml += `<div class="flex justify-center gap-4 mt-16 px-6">
-                    ${data.redes.instagram ? `<a href="${data.redes.instagram}" target="_blank" class="bg-black text-white px-6 py-3 rounded-full text-[10px] font-black border border-white/20">INSTAGRAM</a>` : ''}
-                    ${data.redes.whatsapp ? `<a href="${data.redes.whatsapp}" target="_blank" class="bg-[#25D366] text-white px-6 py-3 rounded-full text-[10px] font-black">WHATSAPP</a>` : ''}
+                // Redes
+                html += `<div class="flex justify-center gap-4 mt-16 px-6">
+                    <a href="${data.redes.instagram}" target="_blank" class="bg-white text-black px-6 py-2 rounded-full text-[10px] font-black uppercase">Instagram</a>
+                    <a href="${data.redes.whatsapp}" target="_blank" class="bg-[#25D366] text-white px-6 py-2 rounded-full text-[10px] font-black uppercase">WhatsApp</a>
                 </div>`;
 
-                // 4. Video YouTube
-                if (data.youtube_url && data.youtube_url.includes('http')) {
-                    contentHtml += `<div class="mt-16 px-6 max-w-4xl mx-auto">
-                        <div class="aspect-video rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl">
-                            <iframe class="w-full h-full" src="${data.youtube_url}" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>`;
-                }
+                document.getElementById('web-content').innerHTML = html;
+                new Swiper('.sec-slider', { slidesPerView: 'auto', spaceBetween: 20 });
 
-                document.getElementById('web-sections').innerHTML = contentHtml;
-                
-                // Iniciar sliders de las secciones (movimiento horizontal con el dedo)
-                new Swiper('.item-slider', { slidesPerView: 'auto', spaceBetween: 20, freeMode: true });
-
-            } catch (e) {
-                console.log("Esperando configuración del panel...");
+            } catch (err) {
+                document.getElementById('web-content').innerHTML = `<p class="text-center opacity-30 mt-20 text-xs">REVISA EL ARCHIVO DATOS.JSON</p>`;
             }
         }
 
-        // Actualizar Canción y Carátula
-        async function syncRadio() {
+        async function updateMeta() {
             try {
                 const r = await fetch('https://miestacion.turadioonline.com.ar/cp/get_info.php?p=8286');
                 const d = await r.json();
@@ -176,7 +145,7 @@
             } catch (e) {}
         }
 
-        window.onload = () => { initWeb(); syncRadio(); setInterval(syncRadio, 12000); };
+        window.onload = () => { loadData(); updateMeta(); setInterval(updateMeta, 15000); };
     </script>
 </body>
 </html>
