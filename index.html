@@ -9,7 +9,6 @@
     <meta property="og:description" content="Conectando con el mejor ritmo.">
     <meta property="og:image" content="https://i.postimg.cc/mgT4Qfzd/N.png">
     <meta property="og:image:secure_url" content="https://i.postimg.cc/mgT4Qfzd/N.png">
-    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://morelda.github.io/radioparty/">
@@ -57,11 +56,16 @@
         .card img { border-radius: 1.5rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
 
         .player-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 15px 25px; z-index: 5000; display: flex; align-items: center; justify-content: space-between; border-top: 4px solid var(--pink); color: white; }
+
+        /* EL SECRETO DE LA FLUIDEZ EXTREMA */
+        .swiper-wrapper {
+            transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1) !important;
+        }
     </style>
 </head>
 <body>
 
-    <button id="mode-btn" style="position:fixed; top:20px; right:20px; z-index:6000; background:var(--pink); color:white; width:45px; height:45px; border-radius:50%; border:none; cursor:pointer;"><i class="fas fa-moon"></i></button>
+    <button id="mode-btn" style="position:fixed; top:20px; right:20px; z-index:6000; background:var(--pink); color:white; width:45px; height:45px; border-radius:50%; border:none;"><i class="fas fa-moon"></i></button>
     <audio id="main-stream" crossorigin="anonymous"></audio>
 
     <div class="hero">
@@ -87,7 +91,7 @@
         <div class="flex items-center gap-4">
             <img id="radio-art-small" src="https://i.postimg.cc/mgT4Qfzd/N.png" class="w-12 h-12 rounded-xl object-cover">
             <div>
-                <p id="radio-title" class="font-bold text-[10px] uppercase truncate w-32 md:w-64">Conectando...</p>
+                <p id="radio-title" class="font-bold text-[10px] uppercase truncate w-32">Conectando...</p>
                 <span class="text-pink-500 text-[8px] font-black uppercase">En Directo</span>
             </div>
         </div>
@@ -127,14 +131,14 @@
                         <h2 class="block-title">${sec.nombre} <span>${sec.sub}</span></h2>
                         <div class="swiper s-${idx} !overflow-visible">
                             <div class="swiper-wrapper">
-                                ${sec.items.map(i => `<div class="swiper-slide" style="width:200px"><div class="card"><a href="${i.url}" target="_blank"><img src="${i.img}"><p class="mt-3 text-center text-[11px] font-bold uppercase truncate">${i.titulo}</p></a></div></div>`).join('')}
+                                ${sec.items.map(i => `<div class="swiper-slide" style="width:220px"><div class="card"><a href="${i.url}" target="_blank"><img src="${i.img}"><p class="mt-3 text-center text-[11px] font-bold uppercase truncate">${i.titulo}</p></a></div></div>`).join('')}
                             </div>
                         </div>
                     </div>`;
                 });
 
                 if (data.url_tv) {
-                    html += `<div class="mt-20"><h2 class="block-title">TV EN <span>VIVO</span></h2><div class="card overflow-hidden bg-black !p-0 aspect-video"><video id="tv-player" class="w-full h-full" controls playsinline poster="https://i.postimg.cc/mgT4Qfzd/N.png"></video></div></div>`;
+                    html += `<div class="mt-20"><h2 class="block-title">TV EN <span>VIVO</span></h2><div class="card overflow-hidden bg-black !p-0 aspect-video shadow-2xl"><video id="tv-player" class="w-full h-full" controls playsinline poster="https://i.postimg.cc/mgT4Qfzd/N.png"></video></div></div>`;
                 }
 
                 html += `<div class="mt-20 text-center"><h2 class="block-title">Nuestras <span>Redes</span></h2><div class="flex justify-center gap-4 mt-6"><a href="${data.redes.instagram}" target="_blank" class="bg-black text-white px-8 py-3 rounded-full font-bold uppercase text-[10px]">Instagram</a><a href="${data.redes.whatsapp}" target="_blank" class="bg-[#25D366] text-white px-8 py-3 rounded-full font-bold uppercase text-[10px]">WhatsApp</a></div></div>`;
@@ -147,21 +151,23 @@
                     else if (video.canPlayType('application/vnd.apple.mpegurl')) { video.src = data.url_tv; }
                 }
 
-                // 2. CORRECCIÓN DE MOVIMIENTO (ESTILO FACEBOOK STORIES)
+                // --- CONFIGURACIÓN ULTRA FLUIDA SIN TRABAS ---
                 data.secciones.forEach((_, idx) => {
                     new Swiper(`.s-${idx}`, {
                         slidesPerView: 'auto',
                         spaceBetween: 15,
                         freeMode: {
                             enabled: true,
+                            sticky: false, // ¡ESTO EVITA QUE SE TRABE EN LOS CUADROS!
                             momentum: true,
-                            momentumRatio: 3, // Aumenta la distancia del deslizamiento
-                            momentumVelocityRatio: 2, // Aumenta la velocidad inicial
-                            momentumBounce: false
+                            momentumRatio: 5, // Aumenta muchísimo la distancia recorrida
+                            momentumVelocityRatio: 2, // Lo hace más rápido
+                            momentumBounce: false // Evita el rebote que frena el movimiento
                         },
                         grabCursor: true,
                         touchEventsTarget: 'container',
-                        nested: true
+                        nested: true,
+                        resistanceRatio: 0 // Elimina la resistencia al llegar al final
                     });
                 });
 
