@@ -1,5 +1,5 @@
 {
-  "url_tv": "https://tuvideoonline.com.ar:3970/stream/play.m3u8",
+  "url_tv": "https://tuvideoonline.com.ar:3970/live/kevintvlive.m3u8",
   "slider_principal": [
     "https://i.postimg.cc/mgHfGpGJ/image.png",
     "https://i.postimg.cc/wvFnkSh6/Gemini-Generated-Image-ia6vgtia6vgtia6v.png",
@@ -68,16 +68,8 @@
       "nombre": "Sobre",
       "sub": "Nosotros",
       "items": [
-        {
-          "titulo": "DJ KEVIN",
-          "img": "https://i.postimg.cc/xTBrN1Fv/Mesa-de-trabajo-1.png",
-          "url": "https://morelda.github.io/djkevin-login/"
-        },
-        {
-          "titulo": "SEDE",
-          "img": "https://i.postimg.cc/kX7Pdgp3/N.png",
-          "url": "https://morelda.github.io/nosotros-/"
-        }
+        { "titulo": "DJ KEVIN", "img": "https://i.postimg.cc/xTBrN1Fv/Mesa-de-trabajo-1.png", "url": "https://morelda.github.io/djkevin-login/" },
+        { "titulo": "SEDE", "img": "https://i.postimg.cc/kX7Pdgp3/N.png", "url": "https://morelda.github.io/nosotros-/" }
       ]
     }
   ]
