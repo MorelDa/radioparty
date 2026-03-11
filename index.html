@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Radio Party Valencia | Oficial</title>
 
+    <meta property="og:title" content="Radio Party Valencia | Oficial">
+    <meta property="og:description" content="La radio que manda. Escúchanos en vivo y mira nuestra TV.">
+    <meta property="og:image" content="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png">
+    <meta property="og:url" content="https://tuweb.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
@@ -15,16 +24,31 @@
         :root { --pink: #ff2d55; --bg: #ffffff; --text: #1a1a1a; --card: #f8f8f8; --border: rgba(0,0,0,0.08); }
         body.dark-mode { --bg: #0d0d0d; --text: #ffffff; --card: #1a1a1a; --border: rgba(255,255,255,0.1); }
         
-        /* FIX: Evitar deslizamiento lateral y blanco */
         html, body { 
             background: var(--bg); 
             color: var(--text); 
             font-family: 'Montserrat', sans-serif; 
             margin: 0; 
             padding: 0;
-            overflow-x: hidden; /* Esto elimina el espacio blanco lateral */
+            overflow-x: hidden;
             width: 100%;
-            position: relative;
+        }
+
+        /* --- SLIDER HERO (Como lo tenías antes) --- */
+        .hero { 
+            width: 100%; 
+            height: 70vh; /* Altura para ver la foto bien */
+            position: relative; 
+            overflow: hidden; 
+            /* Difuminado hacia abajo */
+            mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+        }
+        .hero img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: top; /* Muestra la parte de ARRIBA de la foto completa */
         }
 
         .nexa { text-transform: uppercase; font-weight: 900; letter-spacing: -2px; line-height: 0.8; }
@@ -36,50 +60,43 @@
             display: flex; align-items: center; justify-content: center;
         }
 
-        /* Hero responsivo */
-        .hero { 
-            width: 100%; height: 50vh; position: relative; overflow: hidden; 
-            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-        }
-        .hero img { width: 100%; height: 100%; object-fit: cover; }
-
         .header-main { 
-            position: relative; margin-top: -80px; padding: 0 6%; 
-            display: flex; align-items: center; justify-content: center; gap: 15px; z-index: 100; 
+            position: relative; margin-top: -120px; padding: 0 6%; 
+            display: flex; align-items: center; justify-content: center; gap: 20px; z-index: 100; 
         }
         .heart-box { 
-            width: 130px; height: 130px; border-radius: 2rem; border: 5px solid white; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2); overflow: hidden; background: white; flex-shrink: 0; 
+            width: 140px; height: 140px; border-radius: 2.5rem; border: 6px solid white; 
+            box-shadow: 0 20px 45px rgba(0,0,0,0.2); overflow: hidden; background: white; flex-shrink: 0; 
         }
 
         @media (min-width: 1024px) {
-            .hero { height: 75vh; }
-            .header-main { margin-top: -180px; gap: 40px; }
-            .heart-box { width: 300px; height: 300px; border-radius: 4rem; border: 12px solid white; }
+            .hero { height: 85vh; }
+            .header-main { margin-top: -220px; gap: 60px; }
+            .heart-box { width: 380px; height: 380px; border-radius: 5rem; border: 15px solid white; }
+            .nexa { font-size: 100px !important; }
         }
 
-        .block-title { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 30px; text-align: center; }
-        .block-title::after { content: ''; display: block; width: 50px; height: 5px; background: var(--pink); margin: 8px auto 0; border-radius: 10px; }
+        .block-title { font-size: 26px; font-weight: 900; text-transform: uppercase; margin-bottom: 35px; text-align: center; }
+        .block-title::after { content: ''; display: block; width: 60px; height: 5px; background: var(--pink); margin: 10px auto 0; border-radius: 10px; }
 
-        .card { background: var(--card); border-radius: 1.8rem; padding: 12px; border: 1px solid var(--border); }
-        .card img { border-radius: 1.5rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+        .card { background: var(--card); border-radius: 2rem; padding: 15px; border: 1px solid var(--border); transition: 0.3s; }
+        .card img { border-radius: 1.7rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
 
-        /* FIX: Reproductor fijo SIEMPRE visible en móvil */
+        /* --- REPRODUCTOR FIJO --- */
         .player-bar { 
             position: fixed; bottom: 0; left: 0; width: 100%; 
-            background: #000; padding: 12px 20px; z-index: 5000; 
+            background: #000; padding: 15px 25px; z-index: 5000; 
             display: flex; align-items: center; justify-content: space-between; 
             border-top: 4px solid var(--pink); color: white;
-            box-sizing: border-box;
         }
 
-        .btn-red { padding: 12px 25px; border-radius: 50px; font-weight: 900; text-transform: uppercase; font-size: 11px; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-red { padding: 14px 30px; border-radius: 50px; font-weight: 900; text-transform: uppercase; font-size: 12px; display: inline-flex; align-items: center; gap: 10px; }
+        
+        /* Ajuste para que el carrusel se mueva suave en móvil */
+        .swiper-wrapper { transition-timing-function: ease-out !important; }
     </style>
 </head>
-<body>
-
-    <button class="mode-toggle" id="mode-btn"><i class="fas fa-moon"></i></button>
+<body class="dark-mode"> <button class="mode-toggle" id="mode-btn"><i class="fas fa-sun"></i></button>
     <audio id="main-stream" crossorigin="anonymous"></audio>
 
     <div class="hero">
@@ -90,26 +107,26 @@
 
     <header class="header-main">
         <div class="flex-1">
-            <h1 class="nexa text-[38px] md:text-[80px]">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1>
+            <h1 class="nexa text-[42px] md:text-[90px]">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1>
         </div>
         <div class="heart-box">
             <img id="radio-art-big" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-full h-full object-cover">
         </div>
     </header>
 
-    <main id="web-content" class="pt-12 px-5 max-w-7xl mx-auto w-full"></main>
+    <main id="web-content" class="pt-16 px-6 max-w-7xl mx-auto w-full"></main>
     
-    <footer class="text-center py-16 pb-32 text-[9px] font-bold opacity-50 uppercase">© 2026 DJKEVIN PRODUCCIONES</footer>
+    <footer class="text-center py-20 pb-40 text-[10px] font-bold opacity-60 uppercase">© 2026 DJKEVIN PRODUCCIONES</footer>
 
     <div class="player-bar">
-        <div class="flex items-center gap-3">
-            <img id="radio-art-small" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-12 h-12 rounded-xl object-cover">
-            <div class="max-w-[120px] md:max-w-none">
-                <p id="radio-title" class="font-bold text-[10px] uppercase truncate">Conectando...</p>
-                <span class="text-pink-500 text-[8px] font-black uppercase">En Directo</span>
+        <div class="flex items-center gap-4">
+            <img id="radio-art-small" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-14 h-14 rounded-2xl object-cover">
+            <div>
+                <p id="radio-title" class="font-bold text-[11px] uppercase truncate w-40">Conectando...</p>
+                <span class="text-pink-500 text-[9px] font-black uppercase">En Directo</span>
             </div>
         </div>
-        <button id="play-btn" class="bg-[#ff2d55] w-12 h-12 rounded-full text-white flex items-center justify-center">
+        <button id="play-btn" class="bg-[#ff2d55] w-14 h-14 rounded-full text-white flex items-center justify-center">
             <i class="fas fa-play" id="play-icon"></i>
         </button>
     </div>
@@ -143,24 +160,24 @@
                 const res = await fetch('datos.json?v=' + Math.random());
                 const data = await res.json();
 
-                // Slider Hero
+                // Slider Superior
                 document.getElementById('slider-target').innerHTML = data.slider_principal.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
-                new Swiper('.main-swiper', { loop: true, speed: 1000, autoplay: { delay: 4000 } });
+                new Swiper('.main-swiper', { loop: true, effect: 'fade', fadeEffect: { crossFade: true }, autoplay: { delay: 5000 }, speed: 1500 });
 
-                let contentHtml = '';
+                let html = '';
                 
-                // 1. Secciones de Música/Ranking
+                // 1. Secciones de Rankings y Novedades
                 data.secciones.forEach((sec, index) => {
-                    contentHtml += `<div class="mt-16">
+                    html += `<div class="mt-20">
                         <h2 class="block-title">${sec.nombre} <span class="text-[#ff2d55]">${sec.sub}</span></h2>
                         <div class="swiper s-${index} !overflow-visible">
                             <div class="swiper-wrapper">
-                                ${sec.items.map(item => `
-                                    <div class="swiper-slide" style="width:220px">
+                                ${sec.items.map(i => `
+                                    <div class="swiper-slide" style="width:260px">
                                         <div class="card">
-                                            <a href="${item.url}" target="_blank">
-                                                <img src="${item.img}">
-                                                <p class="mt-3 text-center text-[11px] font-black uppercase truncate">${item.titulo}</p>
+                                            <a href="${i.url}" target="_blank">
+                                                <img src="${i.img}">
+                                                <p class="mt-4 text-center text-[12px] font-black uppercase truncate">${i.titulo}</p>
                                             </a>
                                         </div>
                                     </div>
@@ -172,44 +189,51 @@
 
                 // 2. TV (POR ORDEN: ANTES DE REDES)
                 if (data.url_tv) {
-                    contentHtml += `<div class="mt-20">
+                    html += `<div class="mt-20">
                         <h2 class="block-title">TV EN <span class="text-[#ff2d55]">VIVO</span></h2>
-                        <div class="card overflow-hidden bg-black !p-0 aspect-video shadow-xl">
+                        <div class="card overflow-hidden bg-black !p-0 aspect-video shadow-2xl">
                             <video id="tv-player" class="w-full h-full" controls playsinline poster="https://i.postimg.cc/mgT4Qfzd/N.png"></video>
                         </div>
                     </div>`;
                 }
 
                 // 3. Redes Sociales
-                contentHtml += `<div class="mt-20 text-center pb-10">
+                html += `<div class="mt-28 text-center">
                     <h2 class="block-title">Nuestras <span class="text-[#ff2d55]">Redes</span></h2>
-                    <div class="flex flex-wrap justify-center gap-4 mt-6">
+                    <div class="flex flex-wrap justify-center gap-6 mt-8">
                         <a href="${data.redes.instagram}" target="_blank" class="btn-red bg-black text-white"><i class="fab fa-instagram"></i> Instagram</a>
                         <a href="${data.redes.whatsapp}" target="_blank" class="btn-red bg-[#25D366] text-white"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>`;
 
-                document.getElementById('web-content').innerHTML = contentHtml;
+                document.getElementById('web-content').innerHTML = html;
 
-                // Inicializar Video TV
+                // Cargar Video TV
                 if (data.url_tv) {
                     const video = document.getElementById('tv-player');
-                    const videoUrl = data.url_tv;
                     if (Hls.isSupported()) {
                         const hls = new Hls();
-                        hls.loadSource(videoUrl);
+                        hls.loadSource(data.url_tv);
                         hls.attachMedia(video);
                     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                        video.src = videoUrl;
+                        video.src = data.url_tv;
                     }
                 }
 
-                // Inicializar Swipers horizontales
+                // Swipers Horizontales (Súper fluidos)
                 data.secciones.forEach((_, idx) => {
-                    new Swiper(`.s-${idx}`, { slidesPerView: 'auto', spaceBetween: 15, freeMode: true });
+                    new Swiper(`.s-${idx}`, { 
+                        slidesPerView: 'auto', 
+                        spaceBetween: 25, 
+                        freeMode: true,
+                        grabCursor: true,
+                        touchEventsTarget: 'container',
+                        resistance: true,
+                        resistanceRatio: 0.85
+                    });
                 });
 
-            } catch (err) { console.error("Error cargando JSON:", err); }
+            } catch (err) { console.error(err); }
         }
 
         async function updateMeta() {
@@ -217,10 +241,7 @@
                 const r = await fetch('https://miestacion.turadioonline.com.ar/cp/get_info.php?p=8286');
                 const d = await r.json();
                 if(d.title) document.getElementById('radio-title').innerText = d.title;
-                if(d.art) { 
-                    document.getElementById('radio-art-small').src = d.art; 
-                    document.getElementById('radio-art-big').src = d.art; 
-                }
+                if(d.art) { document.getElementById('radio-art-small').src = d.art; document.getElementById('radio-art-big').src = d.art; }
             } catch (e) {}
         }
 
