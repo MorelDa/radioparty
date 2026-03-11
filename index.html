@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
     <style>
         :root { --pink: #ff2d55; --bg: #ffffff; --text: #1a1a1a; --card: #f8f8f8; --border: rgba(0,0,0,0.08); }
         body.dark-mode { --bg: #0d0d0d; --text: #ffffff; --card: #1a1a1a; --border: rgba(255,255,255,0.1); }
@@ -151,18 +153,25 @@
 
                 if (data.slider_principal) {
                     document.getElementById('slider-target').innerHTML = data.slider_principal.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
-                    
                     new Swiper('.main-swiper', {
-                        loop: true,
-                        speed: 2000, 
-                        effect: 'fade', 
-                        fadeEffect: { crossFade: true },
+                        loop: true, speed: 2000, effect: 'fade', fadeEffect: { crossFade: true },
                         autoplay: { delay: 5000, disableOnInteraction: false },
                         watchSlidesProgress: true,
                     });
                 }
 
                 let html = '';
+
+                // SECCIÓN DE TV (CARGA SI EXISTE url_tv EN EL JSON)
+                if (data.url_tv) {
+                    html += `<div class="mt-20">
+                        <h2 class="block-title">TV EN <span class="text-[#ff2d55]">VIVO</span></h2>
+                        <div class="card overflow-hidden bg-black !p-0 aspect-video shadow-2xl">
+                            <video id="tv-player" class="w-full h-full" controls poster="https://i.postimg.cc/mgT4Qfzd/N.png"></video>
+                        </div>
+                    </div>`;
+                }
+
                 data.secciones.forEach((sec, index) => {
                     if (sec.items && sec.items.length > 0) {
                         html += `<div class="mt-20">
@@ -192,23 +201,24 @@
                 </div>`;
 
                 document.getElementById('web-content').innerHTML = html;
+
+                // INICIALIZAR TV PLAYER SOLO SI EXISTE LA URL
+                if (data.url_tv) {
+                    const video = document.getElementById('tv-player');
+                    if (Hls.isSupported()) {
+                        const hls = new Hls();
+                        hls.loadSource(data.url_tv);
+                        hls.attachMedia(video);
+                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                        video.src = data.url_tv;
+                    }
+                }
+
                 data.secciones.forEach((_, index) => {
                     new Swiper(`.item-slider-${index}`, { 
-                        slidesPerView: 'auto', 
-                        spaceBetween: 25, 
-                        grabCursor: true,
-                        resistance: true,
-                        resistanceRatio: 0, // Elimina el "freno" al inicio/final
-                        freeMode: {
-                            enabled: true,
-                            momentum: true, // Habilita la inercia
-                            momentumRatio: 1, // Velocidad de la inercia
-                            momentumVelocityRatio: 1.5, // Más rápido al soltar
-                            sticky: false
-                        },
-                        touchRatio: 1.2, // Sensibilidad al dedo
-                        shortSwipes: true,
-                        longSwipes: true
+                        slidesPerView: 'auto', spaceBetween: 25, grabCursor: true, resistance: true, resistanceRatio: 0,
+                        freeMode: { enabled: true, momentum: true, momentumRatio: 1, momentumVelocityRatio: 1.5, sticky: false },
+                        touchRatio: 1.2, shortSwipes: true, longSwipes: true
                     });
                 });
             } catch (err) {}
