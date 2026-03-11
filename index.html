@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Radio Party Valencia | Oficial</title>
 
-    <meta property="og:type" content="website">
     <meta property="og:title" content="Radio Party Valencia | Oficial">
-    <meta property="og:description" content="Conectando con el mejor ritmo. Escúchanos en vivo.">
+    <meta property="og:description" content="Conectando con el mejor ritmo.">
     <meta property="og:image" content="https://i.postimg.cc/mgT4Qfzd/N.png">
-    <meta property="og:image:secure_url" content="https://i.postimg.cc/mgT4Qfzd/N.png">
-    <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://morelda.github.io/radioparty/">
-    
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://i.postimg.cc/mgT4Qfzd/N.png">
 
@@ -29,49 +26,37 @@
         :root { --pink: #ff2d55; --bg: #ffffff; --text: #1a1a1a; --card: #f8f8f8; --border: rgba(0,0,0,0.08); }
         body.dark-mode { --bg: #0d0d0d; --text: #ffffff; --card: #1a1a1a; --border: rgba(255,255,255,0.1); }
         
-        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; margin: 0; transition: 0.3s; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
+        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; margin: 0; overflow-x: hidden; }
         
-        .nexa { text-transform: uppercase; font-weight: 900; letter-spacing: -2px; line-height: 0.8; }
-        
-        .mode-toggle { position: fixed; top: 20px; right: 20px; z-index: 3000; width: 45px; height: 45px; border-radius: 50%; background: var(--pink); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; box-shadow: 0 4px 15px rgba(255,45,85,0.3); }
-        
-        /* SLIDER PRINCIPAL */
+        /* SLIDER SUPERIOR - Efecto Ken Burns y degradado */
         .hero { 
-            width: 100%; height: 60vh; position: relative; overflow: hidden;
-            mask-image: linear-gradient(to bottom, black 85%, transparent 100%); 
-            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%); 
+            width: 100%; height: 65vh; position: relative; overflow: hidden;
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%); 
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); 
         }
         .hero img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
-        .header-main { position: relative; margin-top: -100px; padding: 0 6%; display: flex; align-items: center; justify-content: center; gap: 20px; z-index: 100; }
-        .heart-box { width: 140px; height: 140px; border-radius: 2.5rem; border: 6px solid white; box-shadow: 0 20px 45px rgba(0,0,0,0.15); overflow: hidden; background: white; flex-shrink: 0; }
+        .header-main { position: relative; margin-top: -120px; padding: 0 6%; display: flex; align-items: center; justify-content: center; gap: 20px; z-index: 100; }
+        .heart-box { width: 150px; height: 150px; border-radius: 2.8rem; border: 6px solid white; box-shadow: 0 20px 45px rgba(0,0,0,0.15); overflow: hidden; background: white; flex-shrink: 0; }
         
         @media (min-width: 1024px) { 
             .hero { height: 80vh; } 
             .header-main { margin-top: -240px; gap: 60px; } 
-            .nexa { font-size: 110px !important; } 
             .heart-box { width: 420px; height: 420px; border-radius: 5.5rem; border: 15px solid white; } 
         }
 
         .block-title { font-size: 26px; font-weight: 900; text-transform: uppercase; margin-bottom: 35px; text-align: center; }
         .block-title::after { content: ''; display: block; width: 60px; height: 5px; background: var(--pink); margin: 10px auto 0; border-radius: 10px; }
 
-        .card { background: var(--card); border-radius: 2.2rem; padding: 15px; border: 1px solid var(--border); transition: 0.3s; }
+        .card { background: var(--card); border-radius: 2.2rem; padding: 15px; border: 1px solid var(--border); }
         .card img { border-radius: 1.8rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
         
-        .btn-red { padding: 15px 35px; border-radius: 50px; font-weight: 900; text-transform: uppercase; font-size: 12px; display: inline-flex; align-items: center; gap: 10px; }
-
-        .player-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 18px 30px; z-index: 2000; display: flex; align-items: center; justify-content: space-between; border-top: 5px solid var(--pink); color: white; }
-
-        /* EFECTO NETFLIX: Suavizado de movimiento */
-        .swiper-free-mode > .swiper-wrapper {
-            transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1) !important;
-        }
+        .player-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; padding: 18px 30px; z-index: 5000; display: flex; align-items: center; justify-content: space-between; border-top: 5px solid var(--pink); color: white; }
     </style>
 </head>
 <body>
 
-    <button class="mode-toggle" id="mode-btn"><i class="fas fa-moon"></i></button>
+    <button class="mode-toggle" id="mode-btn" style="position:fixed; top:20px; right:20px; z-index:6000; background:var(--pink); color:white; width:45px; height:45px; border-radius:50%; border:none;"><i class="fas fa-moon"></i></button>
     <audio id="main-stream" crossorigin="anonymous"></audio>
 
     <div class="hero">
@@ -82,7 +67,7 @@
 
     <header class="header-main">
         <div class="flex-1">
-            <h1 class="nexa text-[40px] md:text-[90px]">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1>
+            <h1 class="nexa text-[42px] md:text-[90px] font-black">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1>
         </div>
         <div class="heart-box">
             <img id="radio-art-big" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-full h-full object-cover">
@@ -132,12 +117,11 @@
                 const res = await fetch('datos.json?v=' + Math.random());
                 const data = await res.json();
 
-                // Slider Hero
                 document.getElementById('slider-target').innerHTML = data.slider_principal.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
                 new Swiper('.main-swiper', { loop: true, effect: 'fade', autoplay: { delay: 5000 }, speed: 1500 });
 
                 let html = '';
-                // 1. Secciones de Ranking/Novedades
+                // 1. Rankings / Novedades
                 data.secciones.forEach((sec, index) => {
                     html += `<div class="mt-20">
                         <h2 class="block-title">${sec.nombre} <span class="text-[#ff2d55]">${sec.sub}</span></h2>
@@ -149,51 +133,39 @@
                     </div>`;
                 });
 
-                // 2. TV (POR ORDEN: ANTES DE REDES)
+                // 2. TV (POR ORDEN)
                 if (data.url_tv) {
-                    html += `<div class="mt-20">
-                        <h2 class="block-title">TV EN <span class="text-[#ff2d55]">VIVO</span></h2>
-                        <div class="card overflow-hidden bg-black !p-0 aspect-video shadow-2xl">
-                            <video id="tv-player" class="w-full h-full" controls playsinline poster="https://i.postimg.cc/mgT4Qfzd/N.png"></video>
-                        </div>
-                    </div>`;
+                    html += `<div class="mt-20"><h2 class="block-title">TV EN <span class="text-[#ff2d55]">VIVO</span></h2><div class="card overflow-hidden bg-black !p-0 aspect-video shadow-2xl"><video id="tv-player" class="w-full h-full" controls playsinline poster="https://i.postimg.cc/mgT4Qfzd/N.png"></video></div></div>`;
                 }
 
-                // 3. Redes Sociales
-                html += `<div class="mt-24 text-center">
-                    <h2 class="block-title">Nuestras <span class="text-[#ff2d55]">Redes</span></h2>
-                    <div class="flex flex-wrap justify-center gap-6 mt-8">
-                        <a href="${data.redes.instagram}" target="_blank" class="btn-red bg-black text-white"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="${data.redes.whatsapp}" target="_blank" class="btn-red bg-[#25D366] text-white"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    </div>
-                </div>`;
+                // 3. Redes
+                html += `<div class="mt-24 text-center"><h2 class="block-title">Redes <span class="text-[#ff2d55]">Sociales</span></h2><div class="flex flex-wrap justify-center gap-6 mt-8"><a href="${data.redes.instagram}" target="_blank" class="bg-black text-white px-8 py-4 rounded-full font-bold uppercase text-xs"><i class="fab fa-instagram"></i> Instagram</a><a href="${data.redes.whatsapp}" target="_blank" class="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold uppercase text-xs"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>`;
 
                 document.getElementById('web-content').innerHTML = html;
 
-                // Video TV
                 if (data.url_tv) {
                     const video = document.getElementById('tv-player');
                     if (Hls.isSupported()) {
                         const hls = new Hls(); hls.loadSource(data.url_tv); hls.attachMedia(video);
-                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                        video.src = data.url_tv;
-                    }
+                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) { video.src = data.url_tv; }
                 }
 
-                // CARRUSELES ESTILO NETFLIX (MOVIMIENTO FLUIDO)
+                // --- CONFIGURACIÓN DE INERCIA TOTAL PARA MÓVIL ---
                 data.secciones.forEach((_, idx) => {
                     new Swiper(`.s-${idx}`, { 
                         slidesPerView: 'auto', 
                         spaceBetween: 25, 
                         freeMode: {
                             enabled: true,
-                            momentum: true,
-                            momentumRatio: 1,
-                            momentumVelocityRatio: 1.2,
-                            sticky: false
+                            momentum: true, // Esto activa la inercia
+                            momentumRatio: 3, // Cuanto más alto, más distancia recorre al soltar
+                            momentumVelocityRatio: 2, // Cuanto más alto, más rápido rueda
+                            momentumBounce: false,
                         },
+                        mousewheel: true,
+                        touchAngle: 45,
                         grabCursor: true,
-                        touchRatio: 1.5 // Más sensible al dedo
+                        shortSwipes: false // Evita que se detenga de golpe
                     });
                 });
 
