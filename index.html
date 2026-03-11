@@ -196,16 +196,19 @@
                     new Swiper(`.item-slider-${index}`, { 
                         slidesPerView: 'auto', 
                         spaceBetween: 25, 
+                        grabCursor: true,
+                        resistance: true,
+                        resistanceRatio: 0, // Elimina el "freno" al inicio/final
                         freeMode: {
                             enabled: true,
-                            sticky: false,
-                            momentumBounce: false,
+                            momentum: true, // Habilita la inercia
+                            momentumRatio: 1, // Velocidad de la inercia
+                            momentumVelocityRatio: 1.5, // Más rápido al soltar
+                            sticky: false
                         },
-                        mousewheel: {
-                            forceToAxis: true,
-                        },
-                        touchRatio: 1.5, // Más sensible al toque
-                        resistanceRatio: 0.85 // Deslizamiento más suave en los bordes
+                        touchRatio: 1.2, // Sensibilidad al dedo
+                        shortSwipes: true,
+                        longSwipes: true
                     });
                 });
             } catch (err) {}
