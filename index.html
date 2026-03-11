@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
     <title>Radio Party Valencia | Oficial</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png">
 
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Radio Party Valencia | Oficial">
     <meta property="og:description" content="La radio que manda. Escúchanos en vivo y mira nuestra TV.">
     <meta property="og:image" content="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png">
-    <meta property="og:url" content="https://tuweb.com">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png">
+    <meta name="twitter:image" content="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
@@ -28,27 +31,24 @@
             background: var(--bg); 
             color: var(--text); 
             font-family: 'Montserrat', sans-serif; 
-            margin: 0; 
-            padding: 0;
+            margin: 0; padding: 0;
             overflow-x: hidden;
             width: 100%;
         }
 
-        /* --- SLIDER HERO (Como lo tenías antes) --- */
+        /* FOTO SUPERIOR: Completa arriba, difuminada abajo */
         .hero { 
             width: 100%; 
-            height: 70vh; /* Altura para ver la foto bien */
+            height: 60vh; 
             position: relative; 
             overflow: hidden; 
-            /* Difuminado hacia abajo */
-            mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
         }
         .hero img { 
-            width: 100%; 
-            height: 100%; 
+            width: 100%; height: 100%; 
             object-fit: cover; 
-            object-position: top; /* Muestra la parte de ARRIBA de la foto completa */
+            object-position: top; 
         }
 
         .nexa { text-transform: uppercase; font-weight: 900; letter-spacing: -2px; line-height: 0.8; }
@@ -61,28 +61,26 @@
         }
 
         .header-main { 
-            position: relative; margin-top: -120px; padding: 0 6%; 
+            position: relative; margin-top: -100px; padding: 0 6%; 
             display: flex; align-items: center; justify-content: center; gap: 20px; z-index: 100; 
         }
         .heart-box { 
-            width: 140px; height: 140px; border-radius: 2.5rem; border: 6px solid white; 
+            width: 145px; height: 145px; border-radius: 2.5rem; border: 6px solid white; 
             box-shadow: 0 20px 45px rgba(0,0,0,0.2); overflow: hidden; background: white; flex-shrink: 0; 
         }
 
         @media (min-width: 1024px) {
-            .hero { height: 85vh; }
-            .header-main { margin-top: -220px; gap: 60px; }
-            .heart-box { width: 380px; height: 380px; border-radius: 5rem; border: 15px solid white; }
-            .nexa { font-size: 100px !important; }
+            .hero { height: 80vh; }
+            .header-main { margin-top: -200px; gap: 60px; }
+            .heart-box { width: 400px; height: 400px; border-radius: 5.5rem; border: 15px solid white; }
         }
 
         .block-title { font-size: 26px; font-weight: 900; text-transform: uppercase; margin-bottom: 35px; text-align: center; }
         .block-title::after { content: ''; display: block; width: 60px; height: 5px; background: var(--pink); margin: 10px auto 0; border-radius: 10px; }
 
-        .card { background: var(--card); border-radius: 2rem; padding: 15px; border: 1px solid var(--border); transition: 0.3s; }
-        .card img { border-radius: 1.7rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+        .card { background: var(--card); border-radius: 2.2rem; padding: 15px; border: 1px solid var(--border); transition: 0.3s; }
+        .card img { border-radius: 1.8rem; width: 100%; aspect-ratio: 1/1; object-fit: cover; }
 
-        /* --- REPRODUCTOR FIJO --- */
         .player-bar { 
             position: fixed; bottom: 0; left: 0; width: 100%; 
             background: #000; padding: 15px 25px; z-index: 5000; 
@@ -92,11 +90,13 @@
 
         .btn-red { padding: 14px 30px; border-radius: 50px; font-weight: 900; text-transform: uppercase; font-size: 12px; display: inline-flex; align-items: center; gap: 10px; }
         
-        /* Ajuste para que el carrusel se mueva suave en móvil */
-        .swiper-wrapper { transition-timing-function: ease-out !important; }
+        /* Swiper mejorado para deslizamiento suave (Netflix Style) */
+        .swiper-free-mode > .swiper-wrapper {
+            transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1) !important;
+        }
     </style>
 </head>
-<body class="dark-mode"> <button class="mode-toggle" id="mode-btn"><i class="fas fa-sun"></i></button>
+<body> <button class="mode-toggle" id="mode-btn"><i class="fas fa-moon"></i></button>
     <audio id="main-stream" crossorigin="anonymous"></audio>
 
     <div class="hero">
@@ -107,7 +107,7 @@
 
     <header class="header-main">
         <div class="flex-1">
-            <h1 class="nexa text-[42px] md:text-[90px]">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1>
+            <h1 class="nexa text-[45px] md:text-[100px]">RADIO<br><span class="text-[#ff2d55]">PARTY.</span></h1>
         </div>
         <div class="heart-box">
             <img id="radio-art-big" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-full h-full object-cover">
@@ -122,7 +122,7 @@
         <div class="flex items-center gap-4">
             <img id="radio-art-small" src="https://i.postimg.cc/7hgdMS6K/Picsart-24-08-01-00-13-45-109.png" class="w-14 h-14 rounded-2xl object-cover">
             <div>
-                <p id="radio-title" class="font-bold text-[11px] uppercase truncate w-40">Conectando...</p>
+                <p id="radio-title" class="font-bold text-[11px] uppercase truncate w-36 md:w-64">Conectando...</p>
                 <span class="text-pink-500 text-[9px] font-black uppercase">En Directo</span>
             </div>
         </div>
@@ -141,12 +141,9 @@
         playBtn.onclick = () => {
             if (audio.paused) { 
                 audio.src = streamUrl + "?t=" + Date.now(); 
-                audio.play(); 
-                playIcon.className = 'fas fa-pause'; 
+                audio.play(); playIcon.className = 'fas fa-pause'; 
             } else { 
-                audio.pause(); 
-                audio.src = ""; 
-                playIcon.className = 'fas fa-play'; 
+                audio.pause(); audio.src = ""; playIcon.className = 'fas fa-play'; 
             }
         };
 
@@ -160,34 +157,22 @@
                 const res = await fetch('datos.json?v=' + Math.random());
                 const data = await res.json();
 
-                // Slider Superior
                 document.getElementById('slider-target').innerHTML = data.slider_principal.map(img => `<div class="swiper-slide"><img src="${img}"></div>`).join('');
-                new Swiper('.main-swiper', { loop: true, effect: 'fade', fadeEffect: { crossFade: true }, autoplay: { delay: 5000 }, speed: 1500 });
+                new Swiper('.main-swiper', { loop: true, effect: 'fade', autoplay: { delay: 5000 }, speed: 1500 });
 
                 let html = '';
-                
-                // 1. Secciones de Rankings y Novedades
                 data.secciones.forEach((sec, index) => {
                     html += `<div class="mt-20">
                         <h2 class="block-title">${sec.nombre} <span class="text-[#ff2d55]">${sec.sub}</span></h2>
                         <div class="swiper s-${index} !overflow-visible">
                             <div class="swiper-wrapper">
-                                ${sec.items.map(i => `
-                                    <div class="swiper-slide" style="width:260px">
-                                        <div class="card">
-                                            <a href="${i.url}" target="_blank">
-                                                <img src="${i.img}">
-                                                <p class="mt-4 text-center text-[12px] font-black uppercase truncate">${i.titulo}</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                `).join('')}
+                                ${sec.items.map(i => `<div class="swiper-slide" style="width:260px"><div class="card"><a href="${i.url}" target="_blank"><img src="${i.img}"><p class="mt-4 text-center text-[12px] font-black uppercase truncate">${i.titulo}</p></a></div></div>`).join('')}
                             </div>
                         </div>
                     </div>`;
                 });
 
-                // 2. TV (POR ORDEN: ANTES DE REDES)
+                // TV ANTES DE REDES
                 if (data.url_tv) {
                     html += `<div class="mt-20">
                         <h2 class="block-title">TV EN <span class="text-[#ff2d55]">VIVO</span></h2>
@@ -197,7 +182,6 @@
                     </div>`;
                 }
 
-                // 3. Redes Sociales
                 html += `<div class="mt-28 text-center">
                     <h2 class="block-title">Nuestras <span class="text-[#ff2d55]">Redes</span></h2>
                     <div class="flex flex-wrap justify-center gap-6 mt-8">
@@ -208,28 +192,29 @@
 
                 document.getElementById('web-content').innerHTML = html;
 
-                // Cargar Video TV
                 if (data.url_tv) {
                     const video = document.getElementById('tv-player');
                     if (Hls.isSupported()) {
-                        const hls = new Hls();
-                        hls.loadSource(data.url_tv);
-                        hls.attachMedia(video);
+                        const hls = new Hls(); hls.loadSource(data.url_tv); hls.attachMedia(video);
                     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                         video.src = data.url_tv;
                     }
                 }
 
-                // Swipers Horizontales (Súper fluidos)
+                // INERCIA ESTILO NETFLIX
                 data.secciones.forEach((_, idx) => {
                     new Swiper(`.s-${idx}`, { 
                         slidesPerView: 'auto', 
                         spaceBetween: 25, 
-                        freeMode: true,
-                        grabCursor: true,
-                        touchEventsTarget: 'container',
-                        resistance: true,
-                        resistanceRatio: 0.85
+                        freeMode: {
+                            enabled: true,
+                            sticky: false,
+                            momentum: true,
+                            momentumRatio: 1,
+                            momentumVelocityRatio: 1,
+                            momentumBounce: false
+                        },
+                        grabCursor: true
                     });
                 });
 
