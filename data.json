@@ -1,10 +1,10 @@
 {
   "theme": {
     "primary": "#a920e9",
-    "primaryDark": "#5914ad",
+    "primaryDark": "#ad14a8",
     "primaryLight": "#e11458",
     "accent": "#ff4081",
-    "background": "#3b0edd",
+    "background": "#ffffff",
     "surface": "#fff5f9",
     "text": "#1f1235",
     "textMuted": "#ffffff"
