@@ -57,7 +57,15 @@
       "url": "#"
     }
   ],
-  "featuredNews": [],
+  "featuredNews": [
+    {
+      "title": "La nueva canción de Julieta Venegas para el Mundial 2026",
+      "category": "RARANDULA",
+      "image": "https://i.ytimg.com/vi/ThoWe2Vf2BQ/frame0.jpg",
+      "excerpt": "La nueva canción de Julieta Venegas para el Mundial 2026, \"La Niña Futbolista\", ha desatado una oleada masiva de críticas y debate en redes sociales. El tema, respaldado por la Secretaría de Cultura de México para promover la inclusión, dividió por completo a los aficionados al fútbol. La polémica escaló a tal nivel que se desactivaron los comentarios en YouTube y la artista decidió retirarla de sus próximos shows. ¿Tú de qué lado estás? ¿Exageración o crítica justa?",
+      "url": "#https://youtu.be/TapXs54Ah3E?list=RDfcnDmrtj6Sk"
+    }
+  ],
   "topPrograms": [],
   "schedule": {
     "lunes": [
