@@ -43,29 +43,72 @@
       "url": "#"
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "title": "",
+      "category": "",
+      "date": "",
+      "image": "",
+      "url": "#"
+    }
+  ],
   "featuredNews": [],
   "topPrograms": [],
   "schedule": {
-    "lunes": [],
+    "lunes": [
+      {
+        "name": "PUROS EXITOS ",
+        "time": "00:00-23:00",
+        "image": "https://i.postimg.cc/50LH1fxn/Chat-GPT-Image-1-feb-2026-02-12-40.png"
+      },
+      {
+        "name": "",
+        "time": "",
+        "image": ""
+      }
+    ],
     "martes": [],
-    "miercoles": [],
+    "miercoles": [
+      {
+        "name": "PURO HITS ",
+        "time": "00:00-23:00",
+        "image": "https://i.postimg.cc/50LH1fxn/Chat-GPT-Image-1-feb-2026-02-12-40.png"
+      }
+    ],
     "jueves": [],
     "viernes": [],
     "sabado": [],
     "domingo": []
   },
   "podcasts": [],
-  "videos": [],
-  "locutores": [],
+  "videos": [
+    {
+      "title": "Polka Bandita Vol. 2 - Mily Britez",
+      "channel": "@milybritezmusica",
+      "youtubeId": "g9oReZwl6k8"
+    },
+    {
+      "title": "",
+      "channel": "",
+      "youtubeId": ""
+    }
+  ],
+  "locutores": [
+    {
+      "name": "",
+      "program": "",
+      "image": "",
+      "url": "#"
+    }
+  ],
   "tabomixVote": [],
   "footer": {
-    "about": "",
+    "about": "UNA RADIO ONLINE QUE TRANSMITE DESDE LA SEÑAL DIGITAL DESDE VALENCIA ESPAÑA",
     "contact": {
-      "phone": "",
-      "email": "",
+      "phone": "+34604875068",
+      "email": "radioparty600@gmail.com",
       "address": ""
     },
-    "copyright": ""
+    "copyright": "RADIO PARTY VALENCIA 2026 DERECHOS RESERVADOS "
   }
 }
