@@ -1,6 +1,6 @@
 {
   "theme": {
-    "primary": "#e91e63",
+    "primary": "#a920e9",
     "primaryDark": "#ad1457",
     "primaryLight": "#fce4ec",
     "accent": "#ff4081",
@@ -24,14 +24,19 @@
     "logoUrl": "https://i.postimg.cc/50LH1fxn/Chat-GPT-Image-1-feb-2026-02-12-40.png",
     "favicon": "https://i.postimg.cc/50LH1fxn/Chat-GPT-Image-1-feb-2026-02-12-40.png"
   },
-  "menu": [],
+  "menu": [
+    {
+      "label": "Nuevo",
+      "url": "#"
+    }
+  ],
   "breakingNews": "FALTAN 2 DIAS PARA EL PARTIDO DE PARAGUAY ",
   "player": {
     "showTitle": "EN DIRECTO",
-    "programName": "",
+    "programName": "MUSIC HITS",
     "hostName": "",
     "schedule": "",
-    "cover": ""
+    "cover": "https://i.ibb.co/WNMrSMYr/kjij.png"
   },
   "banners": [
     {
@@ -83,14 +88,14 @@
   "podcasts": [],
   "videos": [
     {
+      "title": "Shakira, Burna Boy - Dai Dai (Official Video)",
+      "channel": "@Shakira",
+      "youtubeId": "RDfcnDmrtj6Sk"
+    },
+    {
       "title": "Polka Bandita Vol. 2 - Mily Britez",
       "channel": "@milybritezmusica",
       "youtubeId": "g9oReZwl6k8"
-    },
-    {
-      "title": "",
-      "channel": "",
-      "youtubeId": ""
     }
   ],
   "locutores": [
