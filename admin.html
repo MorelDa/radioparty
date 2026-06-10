@@ -321,16 +321,37 @@ const HANDLERS = {};
 function renderSite(c){
   const s = DATA.site;
   c.innerHTML = `
-    <div class="info-box"><i class="fas fa-info-circle"></i><div>Configura la información general de tu sitio web. Todos los cambios se reflejan en el header, footer y reproductor.</div></div>
+    <div class="info-box"><i class="fas fa-info-circle"></i><div>Configura la información general, logos, redes y datos generales del sitio.</div></div>
+
     <div class="card">
-      <div class="card-title"><i class="fas fa-globe"></i>Datos Generales</div>
+      <div class="card-title"><i class="fas fa-tag"></i>Identidad de Marca</div>
       <div class="form-grid">
         ${field('Nombre del sitio',s.name,'site_name')}
         ${field('Tagline / Eslogan',s.tagline,'site_tagline')}
-        ${fieldFull('URL del stream de audio',s.streamUrl,'site_stream')}
-        ${fieldFull('URL App (Google Play)',s.appUrl,'site_app')}
+        ${fieldFull('Logo (URL de imagen) — opcional, reemplaza el ícono de antena',s.logoUrl,'site_logo')}
+        ${fieldFull('Favicon (URL .png o .ico) — el iconito de la pestaña del navegador',s.favicon,'site_favicon')}
+      </div>
+      <div class="preview-row" style="margin-top:14px;gap:24px">
+        ${s.logoUrl?`<div><div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;font-weight:600">LOGO</div><img class="img-preview" src="${s.logoUrl}" onerror="this.style.opacity=.3" /></div>`:''}
+        ${s.favicon?`<div><div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;font-weight:600">FAVICON</div><img class="img-preview" style="width:32px;height:32px" src="${s.favicon}" onerror="this.style.opacity=.3" /></div>`:''}
       </div>
     </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-bullhorn"></i>Noticias Urgentes (cinta superior)</div>
+      <div class="form-grid">
+        ${textareaFull('Texto de \u00faltimas noticias (cinta animada en la parte superior)',DATA.breakingNews,'breaking')}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-broadcast-tower"></i>Streaming y Aplicaci\u00f3n</div>
+      <div class="form-grid">
+        ${fieldFull('URL del stream de audio (ej: https://stream.zeno.fm/xxx)',s.streamUrl,'site_stream')}
+        ${fieldFull('URL App (Google Play o App Store)',s.appUrl,'site_app')}
+      </div>
+    </div>
+
     <div class="card">
       <div class="card-title"><i class="fas fa-share-alt"></i>Redes Sociales</div>
       <div class="form-grid">
@@ -344,6 +365,9 @@ function renderSite(c){
 }
 HANDLERS.site_name=v=>DATA.site.name=v;
 HANDLERS.site_tagline=v=>DATA.site.tagline=v;
+HANDLERS.site_logo=v=>DATA.site.logoUrl=v;
+HANDLERS.site_favicon=v=>DATA.site.favicon=v;
+HANDLERS.breaking=v=>DATA.breakingNews=v;
 HANDLERS.site_stream=v=>DATA.site.streamUrl=v;
 HANDLERS.site_app=v=>DATA.site.appUrl=v;
 HANDLERS.soc_fb=v=>DATA.site.social.facebook=v;
