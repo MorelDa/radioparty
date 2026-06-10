@@ -1,76 +1,221 @@
 {
-  "url_tv": "https://tuvideoonline.com.ar:3970/live/kevintvlive.m3u8",
-  "slider_principal": [
-    "https://i.postimg.cc/mgHfGpGJ/image.png",
-    "https://i.postimg.cc/CdpK7JXS/KIKI.png",
-    "https://img.freepik.com/fotos-premium/closeup-retrato-chico-foxy-llevando-boombox-boca-abierta_274222-25391.jpg"
-  ],
-  "redes": {
-    "instagram": "https://www.instagram.com/djkevin_inthemix?igsh=YzFhZDgwZnN3Nm5u",
-    "whatsapp": "https://wa.me/34604875068"
+  "theme": {
+    "primary": "#e91e63",
+    "primaryDark": "#ad1457",
+    "primaryLight": "#fce4ec",
+    "accent": "#ff4081",
+    "background": "#ffffff",
+    "surface": "#fff5f9",
+    "text": "#1f1235",
+    "textMuted": "#6b5b73",
+    "navText": "#ffffff"
   },
-  "secciones": [
-    {
-      "nombre": "Novedades",
-      "sub": "Music",
-      "items": [
-        { "titulo": "Concierto TINI Paraguay", "img": "https://grupovierci.brightspotcdn.com/dims4/default/61a4634/2147483647/strip/true/crop/3851x2164+0+1377/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/4f/47/e52365e542429ea96248b105f6b4/foto-7-3-26-08-44-55.jpg", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Turizo x Maluma", "img": "https://grupovierci.brightspotcdn.com/dims4/default/c41ba82/2147483647/strip/true/crop/1200x674+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/75/fe/d23dfbf44e35b4f6b3ab5e2ae6c3/manuel-turizo-y-maluma.webp", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Piso 21 x Yami Safdie", "img": "https://grupovierci.brightspotcdn.com/dims4/default/c8c50b8/2147483647/strip/true/crop/1300x731+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/5c/9b/78d796d44ae0bc69e07b803dc6a2/diseno-sin-titulo-13-1300x731.webp", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Tainy y el Béisbol", "img": "https://grupovierci.brightspotcdn.com/dims4/default/f66cbc1/2147483647/strip/true/crop/1000x562+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/21/2a/bfbed8b34be79b625edc7ff78bf6/tainy.webp", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "TINI Lidera Ranking", "img": "https://grupovierci.brightspotcdn.com/dims4/default/649ce84/2147483647/strip/true/crop/1080x607+0+39/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/53/1d/a5c7cfce48b48e437f45123b449d/573711062-18552191587063271-4957299295189266681-n-e1772562578229.jpg", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Quiles x Lenny Tavárez", "img": "https://grupovierci.brightspotcdn.com/dims4/default/88e72aa/2147483647/strip/true/crop/686x386+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/fe/b8/2a4570c44f609b0f1b84cb7a76b1/hq720-3.jpg", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Shakira x Beéle", "img": "https://grupovierci.brightspotcdn.com/dims4/default/46474e4/2147483647/strip/true/crop/1080x607+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/e1/13/a530fdc74eba9cc2397d130ec6bd/shakirabr-20260304-p-3845762544980570617-1-38457615046589805332.jpg", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "BTS Álbum Arirang", "img": "https://grupovierci.brightspotcdn.com/dims4/default/09f939f/2147483647/strip/true/crop/1024x575+0+12/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/26/4b/1064c7884ba386a3b02ae3218cff/xqzbt3tc.webp", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Alok Lidera Ranking", "img": "https://grupovierci.brightspotcdn.com/dims4/default/eaece39/2147483647/strip/true/crop/686x386+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/c7/4e/5ef2b9684535aad95d9609d74c79/hq720-1.jpg", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Récord Bad Bunny", "img": "https://grupovierci.brightspotcdn.com/dims4/default/0cb9123/2147483647/strip/true/crop/1200x674+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/02/c5/33d3a8b347149735cd4e9dc5ecfb/a87140af-f971-49e3-9406-bace31741f7f-16-9-discover-aspect-ratio-default-0-x1000y444.jpg", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Me Duele 1 Millón", "img": "https://grupovierci.brightspotcdn.com/dims4/default/48530e9/2147483647/strip/true/crop/1280x719+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/81/c1/eced9e5c4bf89254412f6ba60e88/fpzrfzwcsofli1lwmmon.jpg", "url": "https://morelda.github.io/party-new/" },
-        { "titulo": "Farruko Apadrina Piloto", "img": "https://grupovierci.brightspotcdn.com/dims4/default/ea84f27/2147483647/strip/true/crop/860x483+0+0/resize/500x281!/quality/90/?url=https://k2-prod-grupo-vierci.s3.us-east-1.amazonaws.com/brightspot/16/97/1f373f6f4d0b8a86558087f027be/farruko-apadrina-al-piloto-boricua-christian-velez-e1772465761758-860x679.jpg", "url": "https://morelda.github.io/party-new/" }
-      ]
-    },
-    {
-      "nombre": "Ranking",
-      "sub": "Party",
-      "items": [
-        { "titulo": "01. Opalite", "img": "https://i.ytimg.com/vi/1FVF-9KQiPo/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=1FVF-9KQiPo" },
-        { "titulo": "02. La Villa", "img": "https://i.ytimg.com/vi/EochZ-iyrqQ/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=EochZ-iyrqQ" },
-        { "titulo": "03. Mimosa", "img": "https://i.ytimg.com/vi/ajNyVDEBhC8/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=ajNyVDEBhC8" },
-        { "titulo": "04. CUANDO NO ERA CANTANTE", "img": "https://i.ytimg.com/vi/NVLgkXylEuQ/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=NVLgkXylEuQ" },
-        { "titulo": "05. Una noche más", "img": "https://i.ytimg.com/vi/asZ9WmjginI/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=asZ9WmjginI" },
-        { "titulo": "06. ROSITA", "img": "https://i.ytimg.com/vi/lkb7uzHUAZw/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=lkb7uzHUAZw" },
-        { "titulo": "07. Lluvia", "img": "https://i.ytimg.com/vi/QR87DuIQECM/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=QR87DuIQECM" },
-        { "titulo": "08. W Sound 23", "img": "https://i.ytimg.com/vi/3rg0p23brQ0/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=3rg0p23brQ0" },
-        { "titulo": "09. Jamaican (Bam Bam)", "img": "https://i.ytimg.com/vi/hghqd1eBTYQ/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=hghqd1eBTYQ" },
-        { "titulo": "10. Espacio", "img": "https://i.ytimg.com/vi/NxAWf-jWEW0/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=NxAWf-jWEW0" },
-        { "titulo": "11. Por Un Pendejo No Se Llora", "img": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-        { "titulo": "12. LOVE ME AGAIN", "img": "https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=kJQP7kiw5Fk" },
-        { "titulo": "13. ME VOY A LA CHINGADA", "img": "https://i.ytimg.com/vi/fRh_vgS2dFE/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=fRh_vgS2dFE" },
-        { "titulo": "14. I Just Might", "img": "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=JGwWNGJdvx8" },
-        { "titulo": "15. Te quiero", "img": "https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=60ItHLz5WEA" },
-        { "titulo": "16. Buenos Días", "img": "https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=OPf0YbXqDm0" },
-        { "titulo": "17. FANÁTICO", "img": "https://i.ytimg.com/vi/CevxZvSJLk8/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=CevxZvSJLk8" },
-        { "titulo": "18. Favorita del Ghetto", "img": "https://i.ytimg.com/vi/pRpeEdMmmQ0/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=pRpeEdMmmQ0" },
-        { "titulo": "19. Inglés en Miami", "img": "https://i.ytimg.com/vi/YQHsXMglC9A/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=YQHsXMglC9A" },
-        { "titulo": "20. Posso até não te da flores", "img": "https://i.ytimg.com/vi/34Na4j8AVgA/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=34Na4j8AVgA" },
-        { "titulo": "21. XAHÍ", "img": "https://i.ytimg.com/vi/e-ORhEE9VVg/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=e-ORhEE9VVg" },
-        { "titulo": "22. Mírame Baby", "img": "https://i.ytimg.com/vi/uelHwf8o7_U/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=uelHwf8o7_U" },
-        { "titulo": "23. TONTO", "img": "https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=2Vv-BfVoq4g" },
-        { "titulo": "24. Me duele", "img": "https://i.ytimg.com/vi/kXYiU_JCYtU/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=kXYiU_JCYtU" },
-        { "titulo": "25. UN DÍA", "img": "https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=09R8_2nJtjg" },
-        { "titulo": "26. My Loving", "img": "https://i.ytimg.com/vi/lWA2pjMjpBs/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=lWA2pjMjpBs" },
-        { "titulo": "27. En El Club", "img": "https://i.ytimg.com/vi/ktvTqknDobU/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=ktvTqknDobU" },
-        { "titulo": "28. Nunca me duermo", "img": "https://i.ytimg.com/vi/tAGnKpE4NCI/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=tAGnKpE4NCI" },
-        { "titulo": "29. DIOS LOS BENDIGA", "img": "https://i.ytimg.com/vi/SlPhMPnQ58k/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=SlPhMPnQ58k" },
-        { "titulo": "30. TuChat", "img": "https://i.ytimg.com/vi/Zi_XLOBDo_Y/hqdefault.jpg", "url": "https://www.youtube.com/watch?v=Zi_XLOBDo_Y" }
-      ]
-    },
-    {
-      "nombre": "Sobre",
-      "sub": "Nosotros",
-      "items": [
-        { "titulo": "DJ KEVIN", "img": "https://i.postimg.cc/xTBrN1Fv/Mesa-de-trabajo-1.png", "url": "https://morelda.github.io/djkevin-login/" },
-        { "titulo": "SEDE", "img": "https://i.postimg.cc/kX7Pdgp3/N.png", "url": "https://morelda.github.io/nosotros-/" }
-      ]
+  "site": {
+    "name": "Radio Tabocas Mix",
+    "tagline": "La Radio de Quiruvilca",
+    "logoText": "TABOCAS MIX",
+    "logoUrl": "",
+    "favicon": "",
+    "streamUrl": "https://stream.zeno.fm/example",
+    "appUrl": "https://play.google.com/store/apps/details?id=com.creativoagencia.tabocasmix",
+    "social": {
+      "facebook": "https://facebook.com/tabocasmix",
+      "instagram": "https://instagram.com/tabocasmix",
+      "youtube": "https://youtube.com/@tabocasmix",
+      "tiktok": "https://tiktok.com/@tabocasmix",
+      "whatsapp": "https://wa.me/51999999999"
     }
-  ]
+  },
+  "menu": [
+    { "label": "INICIO", "url": "#inicio" },
+    { "label": "PROGRAMACIÓN", "url": "#programacion" },
+    { "label": "LOCUTORES", "url": "#locutores" },
+    { "label": "NOTICIAS", "url": "#noticias" },
+    { "label": "PODCAST", "url": "#podcast" },
+    { "label": "CONTACTO", "url": "#contacto" }
+  ],
+  "breakingNews": "Un niño muerto y tres heridos deja un ataque armado contra jóvenes que jugaban fútbol en el Callao",
+  "player": {
+    "showTitle": "EN DIRECTO",
+    "programName": "AMANECIENDO CON TABOCAS",
+    "hostName": "Elmer Salinas",
+    "schedule": "04:00 - 06:00",
+    "cover": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/amaneciendo-con-tabocas-1-1024x1024.png"
+  },
+  "banners": [
+    { "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/banner-1.png", "url": "#" },
+    { "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/SASAS-1.png", "url": "#" },
+    { "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/banner_con_padding_2048x740.png", "url": "https://play.google.com/store/apps/details?id=com.creativoagencia.tabocasmix" }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "IDEA Internacional sobre la segunda vuelta en el Perú: «El llamado es a aceptar los resultados»",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/06/6a273b4bd3a1d14a7f0526e5-G2PtwK-150x150.png",
+      "category": "Política",
+      "date": "08 Jun 2026",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "title": "Resultados ONPE: 18 de las 25 regiones ya contabilizaron el total de actas",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/06/6a2783ae8f58e6baee03a9d5-gWF4Mc-150x150.jpg",
+      "category": "Política",
+      "date": "08 Jun 2026",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "title": "¡Insólito! Adulto mayor con discapacidad denuncia que su hijo lo desalojó de su casa",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/06/6a277b4bd3a1d14a7f0526f1-x0xg2l-150x150.png",
+      "category": "Locales",
+      "date": "08 Jun 2026",
+      "url": "#"
+    },
+    {
+      "id": 4,
+      "title": "Keiko Fujimori duplica en votos a Sánchez en Lima: logra 63% y él 36%, según la ONPE",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/06/6a26dafebd36443c0305697e-BQUpQm-150x150.png",
+      "category": "Política",
+      "date": "08 Jun 2026",
+      "url": "#"
+    }
+  ],
+  "featuredNews": [
+    {
+      "id": 1,
+      "title": "Partido ADT vs Los Chankas EN VIVO HOY vía L1 Max por la fecha 12 del Torneo Apertura 2026",
+      "excerpt": "ADT vs Los Chankas EN VIVO juegan este lunes 27 de abril, desde las 3.00 p. m. (hora peruana), por el Torneo Apertura.",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/69efb8a9572deda0880d1156-MvGVXk.jpg",
+      "category": "Deportes",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "title": "PSG – Bayern Múnich: fecha, hora y canal de TV para ver el partidazo por semifinales de la Champions League",
+      "excerpt": "¡Final adelantada! El arranque de las semifinales de la Champions League nos regalará un gran partido.",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/69ecd9861397192aa70a74ad-J42HKo.png",
+      "category": "Deportes",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "title": "Jefferson Farfán se burló de Magaly Medina tras ganarle millonario juicio",
+      "excerpt": "Picante! Jefferson Farfán usó sus redes sociales para cobrarle a Magaly Medina.",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/05/69fccce05aaed.jpg",
+      "category": "Farándula",
+      "url": "#"
+    },
+    {
+      "id": 4,
+      "title": "Paloma Fiuza rompió su silencio tras ser vinculada con Mario Hart",
+      "excerpt": "Luego de ser vinculada con Mario Hart, la brasileña hizo un importante anuncio en sus redes sociales.",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/05/69fcbcc19f447.jpg",
+      "category": "Farándula",
+      "url": "#"
+    },
+    {
+      "id": 5,
+      "title": "Shakira reveló la fecha de estreno de 'Dai Dai', la canción del Mundial 2026",
+      "excerpt": "Shakira confirmó el lanzamiento de su nueva canción para el Mundial 2026.",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/05/69fcf9d823da6.jpg",
+      "category": "Entérate",
+      "url": "#"
+    }
+  ],
+  "topPrograms": [
+    {
+      "name": "AMANECIENDO CON TABOCAS",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/amaneciendo-con-tabocas-1-1024x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "BIENVENIDA LA MAÑANA",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/buenden-1024x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "LA CUMBIA DE TABOCAS",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/LSOSLS-1024x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "A TODA MUSICA",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/ChatGPT-Image-5-jun-2026-10_58_03-a.m-723x1024.png",
+      "url": "#"
+    }
+  ],
+  "schedule": {
+    "lunes": [
+      { "name": "AMANECIENDO CON TABOCAS", "time": "04:00 - 06:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/amaneciendo-con-tabocas-1-300x300.png" },
+      { "name": "BIENVENIDA LA MAÑANA", "time": "06:00 - 08:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/buenden-300x300.png" },
+      { "name": "POR LAS MAÑANAS", "time": "08:00 - 09:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/el-super-show-300x300.png" },
+      { "name": "EL SUPER SHOW DE TABOCAS", "time": "09:00 - 12:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/el-super-show-300x300.png" },
+      { "name": "VOCES Y RITMOS DEL PERU", "time": "12:00 - 13:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/voces-y-ritmos-300x300.png" },
+      { "name": "LA CUMBIA DE TABOCAS", "time": "13:00 - 15:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/LSOSLS-300x300.png" },
+      { "name": "A TODA MUSICA", "time": "15:00 - 17:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/ChatGPT-Image-5-jun-2026-10_58_03-a.m-212x300.png" },
+      { "name": "PONTE DE BUENAS", "time": "17:00 - 19:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/05/ChatGPT-Image-5-jun-2026-01_27_26-p.m-300x300.png" },
+      { "name": "ZONA ACTIVA", "time": "19:00 - 21:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/SADAD-300x300.png" },
+      { "name": "SENTIMIENTOS", "time": "21:00 - 22:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/senbtimeir-300x300.png" },
+      { "name": "TUS NOCHES CON TABOCAS", "time": "22:00 - 23:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/tus-noches-300x300.png" },
+      { "name": "MADRUGADAS SIN LIMITES", "time": "23:00 - 04:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/madrugadas-300x300.png" }
+    ],
+    "martes": [],
+    "miercoles": [],
+    "jueves": [],
+    "viernes": [],
+    "sabado": [],
+    "domingo": []
+  },
+  "podcasts": [
+    {
+      "title": "Los Mirlos, la única banda peruana a la que le pidieron tocar en Coachella",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/maxresdefault-1024x576.jpg",
+      "duration": "12:45",
+      "url": "#"
+    },
+    {
+      "title": "Las historias de las leyendas de la Cumbia Peruana ahora en podcast!",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/maxresdefault-1-1024x576.jpg",
+      "duration": "25:30",
+      "url": "#"
+    },
+    {
+      "title": "Ruth Karina habla claro: fama, lucha y música",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/Dam-Dariram-Radio-Edit-mp3-image.jpg",
+      "duration": "18:15",
+      "url": "#"
+    }
+  ],
+  "videos": [
+    { "title": "Orquesta La Bella Luz - Mix Quiero Ser Feliz (31 Aniversario)", "channel": "Orquesta LA BELLA LUZ", "youtubeId": "rAmZyMMboIE" },
+    { "title": "Armonía 10 de Walther Lozada - Cuando Florezca El Chuño (2026)", "channel": "Armonía 10 de Walther Lozada", "youtubeId": "1HyfQWHgDW0" },
+    { "title": "Corazón Serrano - Fría Ft. Los Kjarkas - 33 Aniversario", "channel": "Corazón Serrano", "youtubeId": "S4xcASh1naA" },
+    { "title": "Corazón Serrano & María Becerra - Poco Yo Remix", "channel": "Corazón Serrano", "youtubeId": "BtHw-GfbbSQ" },
+    { "title": "Grupo Amor Rebelde - Mix Amor Sincero (Vídeo Oficial)", "channel": "AMOR REBELDE", "youtubeId": "SnGBTbP6RFo" }
+  ],
+  "locutores": [
+    { "name": "HENRY BELTRAN", "program": "UNA NUEVA MELODIA", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-11_02_49-a.m-851x1024.png", "url": "#" },
+    { "name": "EDWIN SANDOVAL", "program": "PONTE DE BUENAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_56_07-a.m-837x1024.png", "url": "#" },
+    { "name": "JHON JULIAN", "program": "A TODA MUSICA", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_51_43-a.m-839x1024.png", "url": "#" },
+    { "name": "MILTHON ORBEGOSO", "program": "EL SUPER SHOW DE TABOCAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_45_44-a.m-837x1024.png", "url": "#" },
+    { "name": "CARLOS JUNIOR", "program": "LA CUMBIA DE TABOCAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_39_06-a.m-839x1024.png", "url": "#" },
+    { "name": "JUANKY BELTRAN", "program": "ZONA ACTIVA", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_35_02-a.m-839x1024.png", "url": "#" },
+    { "name": "LUIS TABOADA", "program": "POR LAS MAÑANAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_32_53-a.m-839x1024.png", "url": "#" },
+    { "name": "ELMER SALINAS", "program": "AMANECIENDO CON TABOCAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/ChatGPT-Image-29-abr-2026-10_28_19-a.m-839x1024.png", "url": "#" }
+  ],
+  "tabomixVote": [
+    { "title": "CORAZÓN SERRANO", "subtitle": "Mix Te Sueño", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/06/hq720.jpg", "votes": 152 },
+    { "title": "ARMONÍA 10", "subtitle": "Cuando Florezca El Chuño", "image": "https://i.ytimg.com/vi/1HyfQWHgDW0/mqdefault.jpg", "votes": 98 },
+    { "title": "LA BELLA LUZ", "subtitle": "Mix Quiero Ser Feliz", "image": "https://i.ytimg.com/vi/rAmZyMMboIE/mqdefault.jpg", "votes": 76 }
+  ],
+  "footer": {
+    "about": "Radio Tabocas Mix - La Radio de Quiruvilca. La mejor música, noticias y programas en vivo las 24 horas desde la sierra de La Libertad para todo el Perú y el mundo.",
+    "contact": {
+      "phone": "+51 999 999 999",
+      "email": "contacto@tabocasmix.com",
+      "address": "Quiruvilca, Santiago de Chuco, La Libertad - Perú"
+    },
+    "copyright": "© 2026 Radio Tabocas Mix - La Radio de Quiruvilca. Todos los derechos reservados."
+  }
 }
