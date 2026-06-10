@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Radio Tabocas Mix - La Radio de Quiruvilca</title>
+<meta name="description" content="Radio Tabocas Mix - La Radio de Quiruvilca. Noticias, música y programas en vivo 24/7." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>:root{
+  --primary:#e91e63;
+  --primary-dark:#ad1457;
+  --primary-light:#fce4ec;
+  --accent:#ff4081;
+  --bg:#ffffff;
+  --surface:#fff5f9;
+  --text:#1f1235;
+  --text-muted:#6b5b73;
+  --nav-text:#ffffff;
+  --shadow:0 10px 30px rgba(233,30,99,0.12);
+  --shadow-sm:0 4px 14px rgba(233,30,99,0.10);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.5;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{max-width:1280px;margin:0 auto;padding:0 20px}
+
+/* TOPBAR */
+.topbar{background:linear-gradient(90deg,var(--primary-dark),var(--primary));color:#fff;font-size:13px;padding:8px 0}
+.topbar-inner{display:flex;align-items:center;gap:14px}
+.breaking-label{background:rgba(255,255,255,0.18);padding:4px 12px;border-radius:20px;font-weight:600;white-space:nowrap;font-size:12px;letter-spacing:.5px}
+.breaking-ticker{flex:1;overflow:hidden;white-space:nowrap}
+.breaking-ticker span{display:inline-block;animation:tick 28s linear infinite;padding-left:100%}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.top-social{display:flex;gap:10px}
+.top-social a{width:26px;height:26px;display:grid;place-items:center;background:rgba(255,255,255,.15);border-radius:50%;transition:background .2s,transform .2s}
+.top-social a:hover{background:#fff;color:var(--primary);transform:translateY(-2px)}
+
+/* HEADER */
+.header{background:#fff;border-bottom:1px solid var(--primary-light);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(233,30,99,.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:18px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:46px;height:46px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border-radius:12px;font-size:22px;box-shadow:var(--shadow-sm)}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-title{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--primary-dark);font-size:18px;letter-spacing:.5px}
+.logo-sub{font-size:11px;color:var(--text-muted);font-weight:500}
+.nav{display:flex;gap:6px}
+.nav a{padding:10px 14px;font-weight:600;font-size:14px;color:var(--text);border-radius:10px;transition:background .2s,color .2s;position:relative}
+.nav a:hover,.nav a.active{background:var(--primary-light);color:var(--primary-dark)}
+.menu-toggle{display:none;background:transparent;border:none;font-size:24px;color:var(--primary);cursor:pointer}
+
+/* HERO */
+.hero{padding:30px 0 40px;background:linear-gradient(180deg,var(--surface),#fff)}
+.hero-grid{display:grid;grid-template-columns:380px 1fr;gap:24px;align-items:stretch}
+.player-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--primary-light)}
+.player-cover{position:relative;aspect-ratio:1/1;background:#000;overflow:hidden}
+.player-cover img{width:100%;height:100%;object-fit:cover}
+.live-badge{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;letter-spacing:.5px}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#ff4081;box-shadow:0 0 0 0 rgba(255,64,129,.7);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,64,129,.7)}70%{box-shadow:0 0 0 12px rgba(255,64,129,0)}100%{box-shadow:0 0 0 0 rgba(255,64,129,0)}}
+.player-info{padding:18px;text-align:center}
+.player-show{font-size:11px;color:var(--primary);font-weight:700;letter-spacing:2px;margin-bottom:4px}
+.player-program{font-family:'Montserrat',sans-serif;font-size:18px;color:var(--text);font-weight:800;line-height:1.2;margin-bottom:4px}
+.player-host{color:var(--text-muted);font-size:13px;margin-bottom:6px;font-weight:500}
+.player-schedule{font-size:12px;color:var(--primary-dark);margin-bottom:14px;font-weight:600}
+.player-controls{display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap}
+.play-btn{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:none;font-size:18px;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 20px rgba(233,30,99,.35);transition:transform .2s}
+.play-btn:hover{transform:scale(1.08)}
+.volume-wrap{display:flex;align-items:center;gap:8px;color:var(--primary-dark)}
+.volume-wrap input{width:80px;accent-color:var(--primary)}
+.app-btn{background:var(--primary-light);color:var(--primary-dark);padding:8px 14px;border-radius:20px;font-weight:600;font-size:13px;display:inline-flex;align-items:center;gap:6px;transition:background .2s,color .2s}
+.app-btn:hover{background:var(--primary);color:#fff}
+
+/* BANNER SLIDER */
+.banner-slider{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--primary-light);min-height:380px}
+.banner-track{display:flex;width:100%;height:100%;transition:transform .6s cubic-bezier(.65,0,.35,1)}
+.banner-slide{flex:0 0 100%;min-height:380px;display:grid;place-items:center;background:#fff}
+.banner-slide img{width:100%;height:100%;object-fit:cover}
+.banner-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border:none;width:42px;height:42px;border-radius:50%;cursor:pointer;color:var(--primary-dark);font-size:16px;box-shadow:var(--shadow-sm);transition:background .2s,color .2s;z-index:2}
+.banner-arrow:hover{background:var(--primary);color:#fff}
+.banner-arrow.prev{left:14px}
+.banner-arrow.next{right:14px}
+.banner-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
+.banner-dots button{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.6);border:none;cursor:pointer;padding:0;transition:width .2s,background .2s}
+.banner-dots button.active{width:24px;border-radius:8px;background:var(--primary)}
+
+/* SECTIONS */
+.section{padding:50px 0}
+.section-alt{background:var(--surface)}
+.section-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:24px;margin-bottom:26px;color:var(--primary-dark);text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.section-title::before{content:'';width:6px;height:28px;background:linear-gradient(180deg,var(--primary),var(--accent));border-radius:4px}
+.section-title::after{content:'';flex:1;height:2px;background:linear-gradient(90deg,var(--primary-light),transparent)}
+
+/* NEWS GRID */
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.news-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;gap:14px;padding:12px;transition:transform .25s,box-shadow .25s;border:1px solid var(--primary-light)}
+.news-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.news-thumb{flex:0 0 92px;height:92px;border-radius:10px;overflow:hidden;background:var(--primary-light)}
+.news-thumb img{width:100%;height:100%;object-fit:cover}
+.news-content{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.news-cat{font-size:10px;font-weight:700;color:#fff;background:var(--primary);padding:3px 9px;border-radius:12px;align-self:flex-start;letter-spacing:.5px;text-transform:uppercase}
+.news-title{font-size:14px;font-weight:600;color:var(--text);line-height:1.35;margin:6px 0;transition:color .2s}
+.news-card:hover .news-title{color:var(--primary-dark)}
+.news-date{font-size:11px;color:var(--text-muted);display:flex;align-items:center;gap:4px}
+
+/* TOP PROGRAMS */
+.top-programs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.program-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);position:relative;transition:transform .25s,box-shadow .25s;border:1px solid var(--primary-light)}
+.program-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.program-cover{aspect-ratio:1/1;overflow:hidden;background:var(--primary-light)}
+.program-cover img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.program-card:hover .program-cover img{transform:scale(1.06)}
+.program-info{padding:14px;text-align:center}
+.program-name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--text);margin-bottom:10px;min-height:36px;display:flex;align-items:center;justify-content:center;text-transform:uppercase;line-height:1.2}
+.program-btn{display:inline-block;padding:8px 18px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.5px;transition:transform .2s}
+.program-btn:hover{transform:scale(1.05)}
+
+/* SCHEDULE */
+.days-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px;background:var(--primary-light);padding:8px;border-radius:var(--radius)}
+.day-tab{flex:1;min-width:90px;padding:10px 14px;background:transparent;border:none;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer;color:var(--text-muted);transition:background .2s,color .2s;text-transform:uppercase;letter-spacing:.5px}
+.day-tab:hover{color:var(--primary-dark)}
+.day-tab.active{background:#fff;color:var(--primary-dark);box-shadow:var(--shadow-sm)}
+.schedule-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.schedule-item{background:#fff;border-radius:var(--radius);padding:14px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s;border:1px solid var(--primary-light)}
+.schedule-item:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.schedule-thumb{width:64px;height:64px;flex:0 0 64px;border-radius:10px;overflow:hidden;background:var(--primary-light)}
+.schedule-thumb img{width:100%;height:100%;object-fit:cover}
+.schedule-info h4{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--text);font-weight:700;margin-bottom:4px;text-transform:uppercase;line-height:1.2}
+.schedule-info .time{font-size:12px;color:var(--primary);font-weight:600;display:flex;align-items:center;gap:4px}
+.no-programs{grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);background:#fff;border-radius:var(--radius);border:2px dashed var(--primary-light)}
+
+/* PODCASTS */
+.podcast-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.podcast-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .25s,box-shadow .25s;border:1px solid var(--primary-light)}
+.podcast-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.podcast-thumb{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.podcast-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.podcast-card:hover .podcast-thumb img{transform:scale(1.05)}
+.podcast-play{position:absolute;bottom:12px;right:12px;width:48px;height:48px;border-radius:50%;background:rgba(233,30,99,.95);color:#fff;display:grid;place-items:center;font-size:16px;box-shadow:var(--shadow);transition:transform .2s}
+.podcast-card:hover .podcast-play{transform:scale(1.1)}
+.podcast-info{padding:14px}
+.podcast-title{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:6px}
+.podcast-duration{font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:4px}
+
+/* FEATURED NEWS */
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.featured-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s;border:1px solid var(--primary-light);display:flex;flex-direction:column}
+.featured-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.featured-thumb{aspect-ratio:16/10;overflow:hidden;background:var(--primary-light)}
+.featured-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.featured-card:hover .featured-thumb img{transform:scale(1.05)}
+.featured-body{padding:16px;display:flex;flex-direction:column;flex:1}
+.featured-cat{font-size:11px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.featured-title{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:10px}
+.featured-excerpt{font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:14px;flex:1}
+.featured-link{font-size:12px;font-weight:700;color:var(--primary);display:inline-flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.5px;align-self:flex-start;transition:gap .2s}
+.featured-link:hover{gap:10px;color:var(--primary-dark)}
+
+/* VIDEO RANKING */
+.video-ranking{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.video-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .25s,box-shadow .25s;border:1px solid var(--primary-light);position:relative}
+.video-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.video-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000}
+.video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.video-card:hover .video-thumb img{transform:scale(1.05)}
+.video-rank{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;box-shadow:var(--shadow-sm)}
+.video-play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.2);opacity:0;transition:opacity .2s}
+.video-card:hover .video-play{opacity:1}
+.video-play i{font-size:36px;color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.4)}
+.video-info{padding:12px}
+.video-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.35;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.video-channel{font-size:11px;color:var(--text-muted)}
+
+/* LOCUTORES */
+.locutores-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
+.locutor-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s;text-align:center;border:1px solid var(--primary-light)}
+.locutor-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.locutor-photo{aspect-ratio:3/4;overflow:hidden;background:linear-gradient(180deg,var(--primary-light),#fff);position:relative}
+.locutor-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.locutor-card:hover .locutor-photo img{transform:scale(1.05)}
+.locutor-info{padding:14px}
+.locutor-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:var(--text);margin-bottom:4px}
+.locutor-program{font-size:11px;color:var(--primary);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+
+/* VOTE */
+.vote-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.vote-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--primary-light);transition:transform .25s,box-shadow .25s}
+.vote-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.vote-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000}
+.vote-thumb img{width:100%;height:100%;object-fit:cover}
+.vote-rank{position:absolute;top:10px;left:10px;background:#fff;color:var(--primary-dark);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:18px;box-shadow:var(--shadow-sm)}
+.vote-body{padding:14px}
+.vote-title{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--text);margin-bottom:2px}
+.vote-sub{font-size:12px;color:var(--text-muted);margin-bottom:12px}
+.vote-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.vote-count{font-size:12px;color:var(--primary-dark);font-weight:700;display:flex;align-items:center;gap:6px}
+.vote-btn{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:none;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.5px;transition:transform .2s}
+.vote-btn:hover{transform:scale(1.05)}
+.vote-btn.voted{background:#bbb;cursor:default}
+
+/* FOOTER */
+.footer{background:linear-gradient(180deg,#2d0a1f,#1a0612);color:#fff;padding:50px 0 0;margin-top:20px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;padding-bottom:30px}
+.footer-col h4{font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;margin-bottom:16px;color:var(--primary-light);text-transform:uppercase;letter-spacing:1px}
+.footer-col p{color:#d0bdca;font-size:13px;line-height:1.7;margin-bottom:12px}
+.footer-logo{margin-bottom:14px}
+.footer-logo .logo-title{color:#fff}
+.footer-logo .logo-sub{color:#d0bdca}
+.footer-social{display:flex;gap:10px;margin-top:6px}
+.footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#fff;transition:background .2s,transform .2s}
+.footer-social a:hover{background:var(--primary);transform:translateY(-3px)}
+.footer-contact li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#d0bdca;margin-bottom:10px}
+.footer-contact i{color:var(--accent);margin-top:3px;flex-shrink:0}
+.footer-links li{margin-bottom:8px}
+.footer-links a{font-size:13px;color:#d0bdca;transition:color .2s}
+.footer-links a:hover{color:var(--accent)}
+.app-store-btn{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);padding:10px 16px;border-radius:10px;color:#fff;font-size:14px;font-weight:600;margin-top:8px;transition:background .2s}
+.app-store-btn:hover{background:var(--primary)}
+.app-store-btn i{font-size:24px}
+.app-store-btn small{font-size:10px;color:#d0bdca;font-weight:400}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 0;text-align:center;font-size:12px;color:#bca3b6}
+
+/* VIDEO MODAL */
+.video-modal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.video-modal.active{display:flex}
+.video-modal-inner{width:100%;max-width:960px;position:relative}
+.video-iframe-wrap{aspect-ratio:16/9;background:#000;border-radius:var(--radius);overflow:hidden}
+.video-iframe-wrap iframe{width:100%;height:100%}
+.video-close{position:absolute;top:-44px;right:0;background:transparent;border:none;color:#fff;font-size:24px;cursor:pointer;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;transition:background .2s}
+.video-close:hover{background:rgba(255,255,255,.1)}
+
+/* WHATSAPP FLOAT */
+.float-whatsapp{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25d366;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:40;transition:transform .2s}
+.float-whatsapp:hover{transform:scale(1.1)}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .nav{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:#fff;flex-direction:column;padding:80px 24px 24px;gap:8px;box-shadow:-8px 0 24px rgba(0,0,0,.1);transition:right .3s;z-index:55}
+  .nav.open{right:0}
+  .nav a{padding:14px;font-size:15px;border-bottom:1px solid var(--primary-light);border-radius:0}
+  .menu-toggle{display:block}
+  .topbar-inner{font-size:11px}
+  .breaking-label{font-size:10px;padding:3px 8px}
+  .top-social{display:none}
+  .section{padding:36px 0}
+  .section-title{font-size:18px}
+}
+@media (max-width:600px){
+  .news-card{flex-direction:column}
+  .news-thumb{flex:none;width:100%;height:160px}
+  .day-tab{min-width:0;padding:8px;font-size:11px}
+}
+</style>
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="breaking-label"><i class="fas fa-bolt"></i> Últimas noticias</span>
+      <div class="breaking-ticker"><span id="breakingNews">...</span></div>
+      <div class="top-social" id="topSocial"></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon"><i class="fas fa-broadcast-tower"></i></span>
+        <div class="logo-text">
+          <span class="logo-title" id="siteName">Radio Tabocas Mix</span>
+          <span class="logo-sub" id="siteTagline">La Radio de Quiruvilca</span>
+        </div>
+      </a>
+      <nav class="nav" id="mainNav"></nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- HERO + PLAYER + BANNERS -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="player-card">
+        <div class="player-cover">
+          <img id="playerCover" src="" alt="Programa" />
+          <div class="live-badge"><span class="live-dot"></span> EN DIRECTO</div>
+        </div>
+        <div class="player-info">
+          <div class="player-show" id="playerShowTitle">EN DIRECTO</div>
+          <h3 class="player-program" id="playerProgram">PROGRAMA</h3>
+          <div class="player-host" id="playerHost">Conductor</div>
+          <div class="player-schedule"><i class="far fa-clock"></i> <span id="playerSchedule">00:00</span></div>
+          <div class="player-controls">
+            <button id="playBtn" class="play-btn" aria-label="Reproducir"><i class="fas fa-play"></i></button>
+            <div class="volume-wrap">
+              <i class="fas fa-volume-up"></i>
+              <input type="range" id="volume" min="0" max="100" value="80" />
+            </div>
+            <a id="appLink" href="#" target="_blank" class="app-btn"><i class="fab fa-google-play"></i> App</a>
+          </div>
+          <audio id="audioPlayer" preload="none"></audio>
+        </div>
+      </div>
+
+      <div class="banner-slider">
+        <div class="banner-track" id="bannerTrack"></div>
+        <button class="banner-arrow prev" id="bannerPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="banner-arrow next" id="bannerNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="banner-dots" id="bannerDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ULTIMAS NOTICIAS -->
+  <section class="section" id="noticias">
+    <div class="container">
+      <h2 class="section-title"><span>Últimas Noticias</span></h2>
+      <div class="news-grid" id="newsList"></div>
+    </div>
+  </section>
+
+  <!-- PROGRAMAS MAS SINTONIZADOS -->
+  <section class="section section-alt" id="programas">
+    <div class="container">
+      <h2 class="section-title"><span>Programas más sintonizados</span></h2>
+      <div class="top-programs" id="topPrograms"></div>
+    </div>
+  </section>
+
+  <!-- PROGRAMACION RADIAL -->
+  <section class="section" id="programacion">
+    <div class="container">
+      <h2 class="section-title"><span>Programación Radial</span></h2>
+      <div class="days-tabs" id="daysTabs"></div>
+      <div class="schedule-grid" id="scheduleGrid"></div>
+    </div>
+  </section>
+
+  <!-- PODCAST -->
+  <section class="section section-alt" id="podcast">
+    <div class="container">
+      <h2 class="section-title"><span>Zona Podcast Destacados</span></h2>
+      <div class="podcast-grid" id="podcastGrid"></div>
+    </div>
+  </section>
+
+  <!-- NOTICIAS DESTACADAS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title"><span>Noticias Destacadas</span></h2>
+      <div class="featured-grid" id="featuredNews"></div>
+    </div>
+  </section>
+
+  <!-- TOP VIDEO RANKING -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title"><span>Top Video Ranking</span></h2>
+      <div class="video-ranking" id="videoRanking"></div>
+    </div>
+  </section>
+
+  <!-- LOCUTORES -->
+  <section class="section" id="locutores">
+    <div class="container">
+      <h2 class="section-title"><span>Nuestros Locutores</span></h2>
+      <div class="locutores-grid" id="locutoresGrid"></div>
+    </div>
+  </section>
+
+  <!-- TABOMIX VOTE -->
+  <section class="section section-alt" id="tabomix">
+    <div class="container">
+      <h2 class="section-title"><span>Vota por la TaboMix de la semana</span></h2>
+      <div class="vote-grid" id="voteGrid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo footer-logo">
+          <span class="logo-icon"><i class="fas fa-broadcast-tower"></i></span>
+          <div class="logo-text">
+            <span class="logo-title" id="footerSiteName">Radio Tabocas Mix</span>
+            <span class="logo-sub" id="footerSiteTagline">La Radio de Quiruvilca</span>
+          </div>
+        </div>
+        <p id="footerAbout"></p>
+        <div class="footer-social" id="footerSocial"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-contact" id="footerContact"></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul class="footer-links" id="footerLinks"></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Descarga nuestra app</h4>
+        <p>Escúchanos donde quieras desde tu móvil.</p>
+        <a id="footerAppLink" target="_blank" class="app-store-btn">
+          <i class="fab fa-google-play"></i>
+          <span><small>Disponible en</small><br/>Google Play</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><span id="copyrightText"></span></div>
+    </div>
+  </footer>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-inner">
+      <button class="video-close" id="videoClose"><i class="fas fa-times"></i></button>
+      <div class="video-iframe-wrap"><iframe id="videoFrame" src="" allowfullscreen frameborder="0"></iframe></div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a id="floatWhats" href="#" target="_blank" class="float-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script>// ============================================
+// MAIN.JS - Carga data.json y renderiza el sitio
+// ============================================
+const DAY_KEYS = ['lunes','martes','miercoles','jueves','viernes','sabado','domingo'];
+const DAY_LABELS = {lunes:'Lunes',martes:'Martes',miercoles:'Miércoles',jueves:'Jueves',viernes:'Viernes',sabado:'Sábado',domingo:'Domingo'};
+
+let DATA = null;
+let bannerIndex = 0;
+let bannerTimer = null;
+let isPlaying = false;
+
+// FETCH DATA
+async function loadData(){
+  try{
+    const res = await fetch('data.json?v=' + Date.now());
+    DATA = await res.json();
+    applyTheme(DATA.theme);
+    renderAll();
+  }catch(e){
+    console.error('Error cargando data.json',e);
+    document.body.innerHTML = '<div style="padding:40px;text-align:center;font-family:sans-serif"><h2>No se pudo cargar <code>data.json</code></h2><p>Verifica que el archivo exista en la misma carpeta que index.html</p></div>';
+  }
+}
+
+function applyTheme(t){
+  if(!t) return;
+  const r = document.documentElement.style;
+  if(t.primary) r.setProperty('--primary',t.primary);
+  if(t.primaryDark) r.setProperty('--primary-dark',t.primaryDark);
+  if(t.primaryLight) r.setProperty('--primary-light',t.primaryLight);
+  if(t.accent) r.setProperty('--accent',t.accent);
+  if(t.background) r.setProperty('--bg',t.background);
+  if(t.surface) r.setProperty('--surface',t.surface);
+  if(t.text) r.setProperty('--text',t.text);
+  if(t.textMuted) r.setProperty('--text-muted',t.textMuted);
+}
+
+function renderAll(){
+  document.title = `${DATA.site.name} - ${DATA.site.tagline}`;
+  document.getElementById('siteName').textContent = DATA.site.name;
+  document.getElementById('siteTagline').textContent = DATA.site.tagline;
+  document.getElementById('footerSiteName').textContent = DATA.site.name;
+  document.getElementById('footerSiteTagline').textContent = DATA.site.tagline;
+  document.getElementById('breakingNews').textContent = DATA.breakingNews || '';
+
+  renderTopSocial();
+  renderMenu();
+  renderPlayer();
+  renderBanners();
+  renderNews();
+  renderTopPrograms();
+  renderSchedule();
+  renderPodcasts();
+  renderFeaturedNews();
+  renderVideos();
+  renderLocutores();
+  renderVote();
+  renderFooter();
+  initMobileMenu();
+}
+
+// SOCIAL ICONS
+const SOCIAL_ICONS = {facebook:'facebook-f',instagram:'instagram',youtube:'youtube',tiktok:'tiktok',whatsapp:'whatsapp',twitter:'twitter'};
+function renderTopSocial(){
+  const c = document.getElementById('topSocial');
+  c.innerHTML = '';
+  const s = DATA.site.social || {};
+  Object.entries(s).forEach(([k,url])=>{
+    if(!url) return;
+    const icon = SOCIAL_ICONS[k] || 'link';
+    c.insertAdjacentHTML('beforeend',`<a href="${url}" target="_blank" rel="noopener" title="${k}"><i class="fab fa-${icon}"></i></a>`);
+  });
+  // Floating WhatsApp
+  if(s.whatsapp){document.getElementById('floatWhats').href=s.whatsapp;}else{document.getElementById('floatWhats').style.display='none';}
+}
+
+function renderMenu(){
+  const nav = document.getElementById('mainNav');
+  nav.innerHTML = (DATA.menu||[]).map(m=>`<a href="${m.url}">${m.label}</a>`).join('');
+  // close mobile on click
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+}
+
+// PLAYER
+function renderPlayer(){
+  const p = DATA.player||{};
+  document.getElementById('playerCover').src = p.cover || '';
+  document.getElementById('playerShowTitle').textContent = p.showTitle || 'EN DIRECTO';
+  document.getElementById('playerProgram').textContent = p.programName || '';
+  document.getElementById('playerHost').textContent = p.hostName || '';
+  document.getElementById('playerSchedule').textContent = p.schedule || '';
+  document.getElementById('appLink').href = DATA.site.appUrl || '#';
+  const audio = document.getElementById('audioPlayer');
+  audio.src = DATA.site.streamUrl || '';
+  const playBtn = document.getElementById('playBtn');
+  playBtn.onclick = ()=>{
+    if(isPlaying){audio.pause();playBtn.innerHTML='<i class="fas fa-play"></i>';isPlaying=false;}
+    else{audio.play().catch(()=>{});playBtn.innerHTML='<i class="fas fa-pause"></i>';isPlaying=true;}
+  };
+  document.getElementById('volume').oninput = (e)=>{audio.volume = e.target.value/100;};
+  audio.volume = 0.8;
+}
+
+// BANNERS SLIDER
+function renderBanners(){
+  const track = document.getElementById('bannerTrack');
+  const dots = document.getElementById('bannerDots');
+  const banners = DATA.banners||[];
+  track.innerHTML = banners.map(b=>`<div class="banner-slide"><a href="${b.url||'#'}" target="_blank"><img src="${b.image}" alt="banner" loading="lazy" /></a></div>`).join('');
+  dots.innerHTML = banners.map((_,i)=>`<button data-i="${i}" class="${i===0?'active':''}"></button>`).join('');
+  dots.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>goBanner(+b.dataset.i)));
+  document.getElementById('bannerPrev').onclick = ()=>goBanner(bannerIndex-1);
+  document.getElementById('bannerNext').onclick = ()=>goBanner(bannerIndex+1);
+  startBannerAuto();
+}
+function goBanner(i){
+  const banners = DATA.banners||[];
+  if(!banners.length) return;
+  bannerIndex = (i+banners.length)%banners.length;
+  document.getElementById('bannerTrack').style.transform = `translateX(-${bannerIndex*100}%)`;
+  document.querySelectorAll('.banner-dots button').forEach((b,idx)=>b.classList.toggle('active',idx===bannerIndex));
+  startBannerAuto();
+}
+function startBannerAuto(){
+  clearTimeout(bannerTimer);
+  bannerTimer = setTimeout(()=>goBanner(bannerIndex+1),5500);
+}
+
+// NEWS
+function renderNews(){
+  const c = document.getElementById('newsList');
+  c.innerHTML = (DATA.news||[]).map(n=>`
+    <a class="news-card" href="${n.url||'#'}">
+      <div class="news-thumb"><img src="${n.image}" alt="" loading="lazy" /></div>
+      <div class="news-content">
+        <div>
+          ${n.category?`<span class="news-cat">${n.category}</span>`:''}
+          <h3 class="news-title">${n.title}</h3>
+        </div>
+        <div class="news-date"><i class="far fa-calendar"></i> ${n.date||''}</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+// TOP PROGRAMS
+function renderTopPrograms(){
+  const c = document.getElementById('topPrograms');
+  c.innerHTML = (DATA.topPrograms||[]).map(p=>`
+    <div class="program-card">
+      <div class="program-cover"><img src="${p.image}" alt="${p.name}" loading="lazy" /></div>
+      <div class="program-info">
+        <h3 class="program-name">${p.name}</h3>
+        <a class="program-btn" href="${p.url||'#'}">Ver Programa</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+// SCHEDULE
+function renderSchedule(){
+  const tabs = document.getElementById('daysTabs');
+  tabs.innerHTML = DAY_KEYS.map((d,i)=>`<button class="day-tab ${i===0?'active':''}" data-day="${d}">${DAY_LABELS[d]}</button>`).join('');
+  tabs.querySelectorAll('.day-tab').forEach(t=>t.addEventListener('click',()=>{
+    tabs.querySelectorAll('.day-tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    renderDay(t.dataset.day);
+  }));
+  renderDay(DAY_KEYS[0]);
+}
+function renderDay(day){
+  const c = document.getElementById('scheduleGrid');
+  const items = (DATA.schedule&&DATA.schedule[day])||[];
+  if(!items.length){c.innerHTML='<div class="no-programs">No tenemos programas asignados para este día</div>';return;}
+  c.innerHTML = items.map(p=>`
+    <div class="schedule-item">
+      <div class="schedule-thumb"><img src="${p.image}" alt="" loading="lazy" /></div>
+      <div class="schedule-info">
+        <h4>${p.name}</h4>
+        <div class="time"><i class="far fa-clock"></i> ${p.time}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// PODCASTS
+function renderPodcasts(){
+  const c = document.getElementById('podcastGrid');
+  c.innerHTML = (DATA.podcasts||[]).map(p=>`
+    <a class="podcast-card" href="${p.url||'#'}">
+      <div class="podcast-thumb">
+        <img src="${p.image}" alt="" loading="lazy" />
+        <span class="podcast-play"><i class="fas fa-play"></i></span>
+      </div>
+      <div class="podcast-info">
+        <h3 class="podcast-title">${p.title}</h3>
+        <div class="podcast-duration"><i class="far fa-clock"></i> Duración: ${p.duration||'00:00'}</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+// FEATURED NEWS
+function renderFeaturedNews(){
+  const c = document.getElementById('featuredNews');
+  c.innerHTML = (DATA.featuredNews||[]).map(n=>`
+    <article class="featured-card">
+      <a href="${n.url||'#'}"><div class="featured-thumb"><img src="${n.image}" alt="" loading="lazy" /></div></a>
+      <div class="featured-body">
+        ${n.category?`<span class="featured-cat">${n.category}</span>`:''}
+        <h3 class="featured-title">${n.title}</h3>
+        <p class="featured-excerpt">${n.excerpt||''}</p>
+        <a href="${n.url||'#'}" class="featured-link">Leer Entrada <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+  `).join('');
+}
+
+// VIDEOS
+function renderVideos(){
+  const c = document.getElementById('videoRanking');
+  c.innerHTML = (DATA.videos||[]).map((v,i)=>`
+    <div class="video-card" data-yt="${v.youtubeId}">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/${v.youtubeId}/mqdefault.jpg" alt="${v.title}" loading="lazy" />
+        <span class="video-rank">${i+1}</span>
+        <span class="video-play"><i class="fas fa-play-circle"></i></span>
+      </div>
+      <div class="video-info">
+        <div class="video-title">${v.title}</div>
+        <div class="video-channel">${v.channel||''}</div>
+      </div>
+    </div>
+  `).join('');
+  c.querySelectorAll('.video-card').forEach(card=>card.addEventListener('click',()=>openVideo(card.dataset.yt)));
+}
+function openVideo(id){
+  const modal = document.getElementById('videoModal');
+  document.getElementById('videoFrame').src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+  modal.classList.add('active');
+}
+document.getElementById('videoClose').onclick = ()=>{
+  document.getElementById('videoModal').classList.remove('active');
+  document.getElementById('videoFrame').src = '';
+};
+document.getElementById('videoModal').addEventListener('click',e=>{
+  if(e.target.id==='videoModal'){
+    document.getElementById('videoModal').classList.remove('active');
+    document.getElementById('videoFrame').src = '';
+  }
+});
+
+// LOCUTORES
+function renderLocutores(){
+  const c = document.getElementById('locutoresGrid');
+  c.innerHTML = (DATA.locutores||[]).map(l=>`
+    <article class="locutor-card">
+      <a href="${l.url||'#'}"><div class="locutor-photo"><img src="${l.image}" alt="${l.name}" loading="lazy" /></div></a>
+      <div class="locutor-info">
+        <h3 class="locutor-name">${l.name}</h3>
+        <div class="locutor-program">${l.program||''}</div>
+        <a href="${l.url||'#'}" class="featured-link">Ver locutor <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+  `).join('');
+}
+
+// VOTE
+function renderVote(){
+  const votes = JSON.parse(localStorage.getItem('tabomix_votes')||'{}');
+  const c = document.getElementById('voteGrid');
+  c.innerHTML = (DATA.tabomixVote||[]).map((v,i)=>`
+    <div class="vote-card">
+      <div class="vote-thumb">
+        <img src="${v.image}" alt="${v.title}" loading="lazy" />
+        <span class="vote-rank">${i+1}</span>
+      </div>
+      <div class="vote-body">
+        <h3 class="vote-title">${v.title}</h3>
+        <div class="vote-sub">${v.subtitle||''}</div>
+        <div class="vote-row">
+          <span class="vote-count"><i class="fas fa-heart"></i> <span data-count="${i}">${(v.votes||0)+(votes[i]?1:0)}</span> votos</span>
+          <button class="vote-btn ${votes[i]?'voted':''}" data-vi="${i}" ${votes[i]?'disabled':''}>${votes[i]?'Votado':'Votar'}</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  c.querySelectorAll('.vote-btn').forEach(b=>b.addEventListener('click',()=>{
+    const i=+b.dataset.vi;
+    const v=JSON.parse(localStorage.getItem('tabomix_votes')||'{}');
+    if(v[i])return;
+    v[i]=true;localStorage.setItem('tabomix_votes',JSON.stringify(v));
+    const span=document.querySelector(`[data-count="${i}"]`);
+    span.textContent = (+span.textContent)+1;
+    b.classList.add('voted');b.textContent='Votado';b.disabled=true;
+  }));
+}
+
+// FOOTER
+function renderFooter(){
+  const f = DATA.footer||{};
+  document.getElementById('footerAbout').textContent = f.about||'';
+  document.getElementById('copyrightText').textContent = f.copyright||'';
+  const ct = document.getElementById('footerContact');
+  const c = f.contact||{};
+  ct.innerHTML = '';
+  if(c.phone) ct.insertAdjacentHTML('beforeend',`<li><i class="fas fa-phone"></i> <span>${c.phone}</span></li>`);
+  if(c.email) ct.insertAdjacentHTML('beforeend',`<li><i class="fas fa-envelope"></i> <span>${c.email}</span></li>`);
+  if(c.address) ct.insertAdjacentHTML('beforeend',`<li><i class="fas fa-map-marker-alt"></i> <span>${c.address}</span></li>`);
+  // links
+  document.getElementById('footerLinks').innerHTML = (DATA.menu||[]).map(m=>`<li><a href="${m.url}">${m.label}</a></li>`).join('');
+  // social
+  const s = DATA.site.social||{};
+  const fs = document.getElementById('footerSocial');
+  fs.innerHTML = '';
+  Object.entries(s).forEach(([k,url])=>{
+    if(!url) return;
+    const icon = SOCIAL_ICONS[k]||'link';
+    fs.insertAdjacentHTML('beforeend',`<a href="${url}" target="_blank" rel="noopener" title="${k}"><i class="fab fa-${icon}"></i></a>`);
+  });
+  document.getElementById('footerAppLink').href = DATA.site.appUrl||'#';
+}
+
+function initMobileMenu(){
+  const btn = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+  btn.onclick = ()=>nav.classList.toggle('open');
+}
+
+loadData();
+</script>
+</body>
+</html>
