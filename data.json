@@ -1,13 +1,13 @@
 {
   "theme": {
     "primary": "#a920e9",
-    "primaryDark": "#ad1457",
-    "primaryLight": "#fce4ec",
+    "primaryDark": "#5914ad",
+    "primaryLight": "#e11458",
     "accent": "#ff4081",
-    "background": "#ffffff",
+    "background": "#3b0edd",
     "surface": "#fff5f9",
     "text": "#1f1235",
-    "textMuted": "#6b5b73"
+    "textMuted": "#ffffff"
   },
   "site": {
     "name": "RADIO PARTY ",
@@ -59,11 +59,11 @@
   ],
   "featuredNews": [
     {
-      "title": "La nueva canción de Julieta Venegas para el Mundial 2026",
-      "category": "RARANDULA",
-      "image": "https://i.ytimg.com/vi/ThoWe2Vf2BQ/frame0.jpg",
-      "excerpt": "La nueva canción de Julieta Venegas para el Mundial 2026, \"La Niña Futbolista\", ha desatado una oleada masiva de críticas y debate en redes sociales. El tema, respaldado por la Secretaría de Cultura de México para promover la inclusión, dividió por completo a los aficionados al fútbol. La polémica escaló a tal nivel que se desactivaron los comentarios en YouTube y la artista decidió retirarla de sus próximos shows. ¿Tú de qué lado estás? ¿Exageración o crítica justa?",
-      "url": "#https://youtu.be/TapXs54Ah3E?list=RDfcnDmrtj6Sk"
+      "title": "Shakira ficha a Ed Sheeran para los próximos conciertos de Las Mujeres Ya No Lloran World Tour",
+      "category": "MUSICAL",
+      "image": "https://los40.com/resizer/v2/GKJ2LY2GARB3NFN4CBDAHMMD6E.jpeg?auth=24359a9eec38e2bc769e9262fe824ca870377b4e3a597e71ecf151a6a1119a9f&quality=70&width=1200&height=544&focal=437,125",
+      "excerpt": "Shakira ha anunciado una de las sorpresas más destacadas de su gira Las Mujeres Ya No Lloran World Tour: la incorporación de Ed Sheeran a sus próximos conciertos en Nueva York.",
+      "url": "https://los40.com/2026/06/10/shakira-ficha-a-ed-sheeran-para-los-proximos-conciertos-de-las-mujeres-ya-no-lloran-world-tour/"
     }
   ],
   "topPrograms": [],
