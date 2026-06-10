@@ -11,28 +11,46 @@
     "navText": "#ffffff"
   },
   "site": {
-    "name": "Radio Tabocas Mix",
+    "name": "Rsdio party valnecia ",
     "tagline": "La Radio de Quiruvilca",
     "logoText": "TABOCAS MIX",
     "logoUrl": "",
     "favicon": "",
     "streamUrl": "https://stream.zeno.fm/example",
-    "appUrl": "https://play.google.com/store/apps/details?id=com.creativoagencia.tabocasmix",
+    "appUrl": "https://play.google.com/store/apps/details?id=com.volwebb.partyr",
     "social": {
       "facebook": "https://facebook.com/tabocasmix",
       "instagram": "https://instagram.com/tabocasmix",
       "youtube": "https://youtube.com/@tabocasmix",
       "tiktok": "https://tiktok.com/@tabocasmix",
-      "whatsapp": "https://wa.me/51999999999"
+      "whatsapp": "https://wa.me/604875068"
     }
   },
   "menu": [
-    { "label": "INICIO", "url": "#inicio" },
-    { "label": "PROGRAMACIÓN", "url": "#programacion" },
-    { "label": "LOCUTORES", "url": "#locutores" },
-    { "label": "NOTICIAS", "url": "#noticias" },
-    { "label": "PODCAST", "url": "#podcast" },
-    { "label": "CONTACTO", "url": "#contacto" }
+    {
+      "label": "INICIO",
+      "url": "#inicio"
+    },
+    {
+      "label": "PROGRAMACIÓN",
+      "url": "#programacion"
+    },
+    {
+      "label": "LOCUTORES",
+      "url": "#locutores"
+    },
+    {
+      "label": "NOTICIAS",
+      "url": "#noticias"
+    },
+    {
+      "label": "PODCAST",
+      "url": "#podcast"
+    },
+    {
+      "label": "CONTACTO",
+      "url": "#contacto"
+    }
   ],
   "breakingNews": "Un niño muerto y tres heridos deja un ataque armado contra jóvenes que jugaban fútbol en el Callao",
   "player": {
@@ -43,9 +61,18 @@
     "cover": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/amaneciendo-con-tabocas-1-1024x1024.png"
   },
   "banners": [
-    { "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/banner-1.png", "url": "#" },
-    { "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/SASAS-1.png", "url": "#" },
-    { "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/banner_con_padding_2048x740.png", "url": "https://play.google.com/store/apps/details?id=com.creativoagencia.tabocasmix" }
+    {
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/banner-1.png",
+      "url": "#"
+    },
+    {
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/SASAS-1.png",
+      "url": "#"
+    },
+    {
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/banner_con_padding_2048x740.png",
+      "url": "https://play.google.com/store/apps/details?id=com.creativoagencia.tabocasmix"
+    }
   ],
   "news": [
     {
@@ -147,18 +174,66 @@
   ],
   "schedule": {
     "lunes": [
-      { "name": "AMANECIENDO CON TABOCAS", "time": "04:00 - 06:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/amaneciendo-con-tabocas-1-300x300.png" },
-      { "name": "BIENVENIDA LA MAÑANA", "time": "06:00 - 08:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/buenden-300x300.png" },
-      { "name": "POR LAS MAÑANAS", "time": "08:00 - 09:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/el-super-show-300x300.png" },
-      { "name": "EL SUPER SHOW DE TABOCAS", "time": "09:00 - 12:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/el-super-show-300x300.png" },
-      { "name": "VOCES Y RITMOS DEL PERU", "time": "12:00 - 13:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/voces-y-ritmos-300x300.png" },
-      { "name": "LA CUMBIA DE TABOCAS", "time": "13:00 - 15:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/LSOSLS-300x300.png" },
-      { "name": "A TODA MUSICA", "time": "15:00 - 17:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/ChatGPT-Image-5-jun-2026-10_58_03-a.m-212x300.png" },
-      { "name": "PONTE DE BUENAS", "time": "17:00 - 19:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/05/ChatGPT-Image-5-jun-2026-01_27_26-p.m-300x300.png" },
-      { "name": "ZONA ACTIVA", "time": "19:00 - 21:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/SADAD-300x300.png" },
-      { "name": "SENTIMIENTOS", "time": "21:00 - 22:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/senbtimeir-300x300.png" },
-      { "name": "TUS NOCHES CON TABOCAS", "time": "22:00 - 23:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/tus-noches-300x300.png" },
-      { "name": "MADRUGADAS SIN LIMITES", "time": "23:00 - 04:00", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/madrugadas-300x300.png" }
+      {
+        "name": "AMANECIENDO CON TABOCAS",
+        "time": "04:00 - 06:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/amaneciendo-con-tabocas-1-300x300.png"
+      },
+      {
+        "name": "BIENVENIDA LA MAÑANA",
+        "time": "06:00 - 08:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/buenden-300x300.png"
+      },
+      {
+        "name": "POR LAS MAÑANAS",
+        "time": "08:00 - 09:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/el-super-show-300x300.png"
+      },
+      {
+        "name": "EL SUPER SHOW DE TABOCAS",
+        "time": "09:00 - 12:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/el-super-show-300x300.png"
+      },
+      {
+        "name": "VOCES Y RITMOS DEL PERU",
+        "time": "12:00 - 13:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/voces-y-ritmos-300x300.png"
+      },
+      {
+        "name": "LA CUMBIA DE TABOCAS",
+        "time": "13:00 - 15:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/LSOSLS-300x300.png"
+      },
+      {
+        "name": "A TODA MUSICA",
+        "time": "15:00 - 17:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/ChatGPT-Image-5-jun-2026-10_58_03-a.m-212x300.png"
+      },
+      {
+        "name": "PONTE DE BUENAS",
+        "time": "17:00 - 19:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/05/ChatGPT-Image-5-jun-2026-01_27_26-p.m-300x300.png"
+      },
+      {
+        "name": "ZONA ACTIVA",
+        "time": "19:00 - 21:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/SADAD-300x300.png"
+      },
+      {
+        "name": "SENTIMIENTOS",
+        "time": "21:00 - 22:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/senbtimeir-300x300.png"
+      },
+      {
+        "name": "TUS NOCHES CON TABOCAS",
+        "time": "22:00 - 23:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/tus-noches-300x300.png"
+      },
+      {
+        "name": "MADRUGADAS SIN LIMITES",
+        "time": "23:00 - 04:00",
+        "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/madrugadas-300x300.png"
+      }
     ],
     "martes": [],
     "miercoles": [],
@@ -188,26 +263,101 @@
     }
   ],
   "videos": [
-    { "title": "Orquesta La Bella Luz - Mix Quiero Ser Feliz (31 Aniversario)", "channel": "Orquesta LA BELLA LUZ", "youtubeId": "rAmZyMMboIE" },
-    { "title": "Armonía 10 de Walther Lozada - Cuando Florezca El Chuño (2026)", "channel": "Armonía 10 de Walther Lozada", "youtubeId": "1HyfQWHgDW0" },
-    { "title": "Corazón Serrano - Fría Ft. Los Kjarkas - 33 Aniversario", "channel": "Corazón Serrano", "youtubeId": "S4xcASh1naA" },
-    { "title": "Corazón Serrano & María Becerra - Poco Yo Remix", "channel": "Corazón Serrano", "youtubeId": "BtHw-GfbbSQ" },
-    { "title": "Grupo Amor Rebelde - Mix Amor Sincero (Vídeo Oficial)", "channel": "AMOR REBELDE", "youtubeId": "SnGBTbP6RFo" }
+    {
+      "title": "Orquesta La Bella Luz - Mix Quiero Ser Feliz (31 Aniversario)",
+      "channel": "Orquesta LA BELLA LUZ",
+      "youtubeId": "rAmZyMMboIE"
+    },
+    {
+      "title": "Armonía 10 de Walther Lozada - Cuando Florezca El Chuño (2026)",
+      "channel": "Armonía 10 de Walther Lozada",
+      "youtubeId": "1HyfQWHgDW0"
+    },
+    {
+      "title": "Corazón Serrano - Fría Ft. Los Kjarkas - 33 Aniversario",
+      "channel": "Corazón Serrano",
+      "youtubeId": "S4xcASh1naA"
+    },
+    {
+      "title": "Corazón Serrano & María Becerra - Poco Yo Remix",
+      "channel": "Corazón Serrano",
+      "youtubeId": "BtHw-GfbbSQ"
+    },
+    {
+      "title": "Grupo Amor Rebelde - Mix Amor Sincero (Vídeo Oficial)",
+      "channel": "AMOR REBELDE",
+      "youtubeId": "SnGBTbP6RFo"
+    }
   ],
   "locutores": [
-    { "name": "HENRY BELTRAN", "program": "UNA NUEVA MELODIA", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-11_02_49-a.m-851x1024.png", "url": "#" },
-    { "name": "EDWIN SANDOVAL", "program": "PONTE DE BUENAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_56_07-a.m-837x1024.png", "url": "#" },
-    { "name": "JHON JULIAN", "program": "A TODA MUSICA", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_51_43-a.m-839x1024.png", "url": "#" },
-    { "name": "MILTHON ORBEGOSO", "program": "EL SUPER SHOW DE TABOCAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_45_44-a.m-837x1024.png", "url": "#" },
-    { "name": "CARLOS JUNIOR", "program": "LA CUMBIA DE TABOCAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_39_06-a.m-839x1024.png", "url": "#" },
-    { "name": "JUANKY BELTRAN", "program": "ZONA ACTIVA", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_35_02-a.m-839x1024.png", "url": "#" },
-    { "name": "LUIS TABOADA", "program": "POR LAS MAÑANAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_32_53-a.m-839x1024.png", "url": "#" },
-    { "name": "ELMER SALINAS", "program": "AMANECIENDO CON TABOCAS", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/ChatGPT-Image-29-abr-2026-10_28_19-a.m-839x1024.png", "url": "#" }
+    {
+      "name": "HENRY BELTRAN",
+      "program": "UNA NUEVA MELODIA",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-11_02_49-a.m-851x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "EDWIN SANDOVAL",
+      "program": "PONTE DE BUENAS",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_56_07-a.m-837x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "JHON JULIAN",
+      "program": "A TODA MUSICA",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_51_43-a.m-839x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "MILTHON ORBEGOSO",
+      "program": "EL SUPER SHOW DE TABOCAS",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_45_44-a.m-837x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "CARLOS JUNIOR",
+      "program": "LA CUMBIA DE TABOCAS",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_39_06-a.m-839x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "JUANKY BELTRAN",
+      "program": "ZONA ACTIVA",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_35_02-a.m-839x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "LUIS TABOADA",
+      "program": "POR LAS MAÑANAS",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/ChatGPT-Image-29-abr-2026-10_32_53-a.m-839x1024.png",
+      "url": "#"
+    },
+    {
+      "name": "ELMER SALINAS",
+      "program": "AMANECIENDO CON TABOCAS",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/ChatGPT-Image-29-abr-2026-10_28_19-a.m-839x1024.png",
+      "url": "#"
+    }
   ],
   "tabomixVote": [
-    { "title": "CORAZÓN SERRANO", "subtitle": "Mix Te Sueño", "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/06/hq720.jpg", "votes": 152 },
-    { "title": "ARMONÍA 10", "subtitle": "Cuando Florezca El Chuño", "image": "https://i.ytimg.com/vi/1HyfQWHgDW0/mqdefault.jpg", "votes": 98 },
-    { "title": "LA BELLA LUZ", "subtitle": "Mix Quiero Ser Feliz", "image": "https://i.ytimg.com/vi/rAmZyMMboIE/mqdefault.jpg", "votes": 76 }
+    {
+      "title": "CORAZÓN SERRANO",
+      "subtitle": "Mix Te Sueño",
+      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/06/hq720.jpg",
+      "votes": 152
+    },
+    {
+      "title": "ARMONÍA 10",
+      "subtitle": "Cuando Florezca El Chuño",
+      "image": "https://i.ytimg.com/vi/1HyfQWHgDW0/mqdefault.jpg",
+      "votes": 98
+    },
+    {
+      "title": "LA BELLA LUZ",
+      "subtitle": "Mix Quiero Ser Feliz",
+      "image": "https://i.ytimg.com/vi/rAmZyMMboIE/mqdefault.jpg",
+      "votes": 76
+    }
   ],
   "footer": {
     "about": "Radio Tabocas Mix - La Radio de Quiruvilca. La mejor música, noticias y programas en vivo las 24 horas desde la sierra de La Libertad para todo el Perú y el mundo.",
