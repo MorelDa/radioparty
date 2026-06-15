@@ -12,17 +12,17 @@
   },
   "site": {
     "name": "RADIO PARTY",
-    "tagline": "ESPOAÑA VALENCIA",
+    "tagline": "ESPAÑA VALENCIA",
     "logoText": "TABOCAS MIX",
-    "logoUrl": "https://i.postimg.cc/50LH1fxn/Chat-GPT-Image-1-feb-2026-02-12-40.png",
-    "favicon": "https://i.postimg.cc/50LH1fxn/Chat-GPT-Image-1-feb-2026-02-12-40.png",
+    "logoUrl": "https://i.ibb.co/DHxkCVhx/kjij.png",
+    "favicon": "https://i.ibb.co/DHxkCVhx/kjij.png",
     "streamUrl": "https://miestacion.turadioonline.com.ar:8286/stream",
-    "appUrl": "https://play.google.com/store/apps/details?id=com.creativoagencia.tabocasmix",
+    "appUrl": "https://play.google.com/store/apps/details?id=com.volwebb.partyr&pcampaignid=web_share",
     "social": {
-      "facebook": "https://facebook.com/tabocasmix",
-      "instagram": "https://instagram.com/tabocasmix",
-      "youtube": "https://youtube.com/@tabocasmix",
-      "tiktok": "https://tiktok.com/@tabocasmix",
+      "facebook": "https://www.facebook.com/share/18iqJBEg35/",
+      "instagram": "https://www.instagram.com/djkevin_inthemix?igsh=YzFhZDgwZnN3Nm5u",
+      "youtube": "",
+      "tiktok": "https://www.tiktok.com/@djkevin_inthemix?_r=1&_t=ZN-97F4y1mZKCM",
       "whatsapp": "https://wa.me/604875068"
     }
   },
@@ -52,17 +52,17 @@
       "url": "#contacto"
     }
   ],
-  "breakingNews": "Un niño muerto y tres heridos deja un ataque armado contra jóvenes que jugaban fútbol en el Callao",
+  "breakingNews": "ESTAMOS EDITANDO NUESTRO WED ATENTOS \n",
   "player": {
     "showTitle": "EN DIRECTO",
-    "programName": "AMANECIENDO CON TABOCAS",
-    "hostName": "Elmer Salinas",
+    "programName": "RADIO PARTY",
+    "hostName": "DJKEVIN",
     "schedule": "04:00 - 06:00",
-    "cover": "https://laradiodequiruvilca.com/wp-content/uploads/2026/03/amaneciendo-con-tabocas-1-1024x1024.png"
+    "cover": "https://i.ibb.co/DHxkCVhx/kjij.png"
   },
   "banners": [
     {
-      "image": "https://laradiodequiruvilca.com/wp-content/uploads/2026/04/banner-1.png",
+      "image": "https://i.ibb.co/TBpkhQ1L/wed-png.png",
       "url": "#"
     },
     {
@@ -360,12 +360,12 @@
     }
   ],
   "footer": {
-    "about": "Radio Tabocas Mix - La Radio de Quiruvilca. La mejor música, noticias y programas en vivo las 24 horas desde la sierra de La Libertad para todo el Perú y el mundo.",
+    "about": "Radio Party - La Radio los paraguayos . La mejor música, noticias y programas en vivo las 24 horas desde valencia para todo  el mundo.",
     "contact": {
-      "phone": "+51 999 999 999",
-      "email": "contacto@tabocasmix.com",
-      "address": "Quiruvilca, Santiago de Chuco, La Libertad - Perú"
+      "phone": "+34 604 875 068",
+      "email": "contacto@radioparty.com",
+      "address": "Valencia- España"
     },
-    "copyright": "© 2026 Radio Tabocas Mix - La Radio de Quiruvilca. Todos los derechos reservados."
+    "copyright": "© 2026 RADIO PARTY VALENCIA . Todos los derechos reservados."
   }
 }
