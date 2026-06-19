@@ -1,0 +1,111 @@
+{
+  "brand": {
+    "name": "Radio Party Valencia",
+    "fmName": "94.5 FM",
+    "city": "Valencia",
+    "streamUrl": "",
+    "pink": "#ec4899",
+    "violet": "#7c3aed",
+    "violetDark": "#6d28d9",
+    "violetLight": "#c084fc",
+    "favicon": "favicon.svg",
+    "logoText1": "Party",
+    "logoText2": "Valencia",
+    "pinkMode": true,
+    "currentSongTitle": "En Vivo",
+    "currentSongArtist": "Radio Party Valencia"
+  },
+  "ticker": [
+    "Bienvenidos a Radio Party Valencia 94.5 FM",
+    "Sintoniza nuestros programas en vivo cada día",
+    "Síguenos en redes sociales para enterarte de todo"
+  ],
+  "nav": ["INICIO","RANKING","NOTICIAS","VIDEOS","LOCUTORES","CONTACTO"],
+  "social": [
+    {"name":"Facebook","icon":"f","url":"#"},
+    {"name":"Twitter","icon":"X","url":"#"},
+    {"name":"TikTok","icon":"♪","url":"#"},
+    {"name":"WhatsApp","icon":"W","url":"#"},
+    {"name":"Instagram","icon":"IG","url":"#"},
+    {"name":"YouTube","icon":"▶","url":"#"},
+    {"name":"Telegram","icon":"✈","url":"#"}
+  ],
+  "live": {
+    "title": "BIENVENIDA LA MAÑANA",
+    "schedule": "06:00 - 09:00",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?cs=srgb&fm=jpg&q=85&w=400"
+  },
+  "hero": [
+    {"title":"Tus Mejores Artistas","subtitle":"Cumbia, Rock, Pop, Salsa y más","image":"https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?cs=srgb&fm=jpg&q=85&w=1600"},
+    {"title":"Descarga la App","subtitle":"Radio Party Valencia en tu bolsillo","image":"https://images.unsplash.com/photo-1565035010268-a3816f98589a?cs=srgb&fm=jpg&q=85&w=1600"},
+    {"title":"¡La Mejor Música!","subtitle":"94.5 FM - Música sin límites","image":"https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?cs=srgb&fm=jpg&q=85&w=1600"}
+  ],
+  "topProgs": [
+    {"title":"AMANECIENDO","image":"https://images.unsplash.com/photo-1485579149621-3123dd979885?cs=srgb&fm=jpg&q=85&w=600"},
+    {"title":"BIENVENIDA LA MAÑANA","image":"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?cs=srgb&fm=jpg&q=85&w=600"},
+    {"title":"LA HORA MUSICAL","image":"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?cs=srgb&fm=jpg&q=85&w=600"},
+    {"title":"NOCHE DE FIESTA","image":"https://images.unsplash.com/photo-1571266028243-d220bc83b1c1?cs=srgb&fm=jpg&q=85&w=600"}
+  ],
+  "schedule": {
+    "days": ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"],
+    "programs": [
+      {"day":"Miércoles","title":"AMANECIENDO","time":"04:00","image":"https://images.unsplash.com/photo-1485579149621-3123dd979885?cs=srgb&fm=jpg&q=85&w=400","live":false},
+      {"day":"Miércoles","title":"BIENVENIDA","time":"06:00","image":"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?cs=srgb&fm=jpg&q=85&w=400","live":true},
+      {"day":"Miércoles","title":"MAÑANAS","time":"09:00","image":"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?cs=srgb&fm=jpg&q=85&w=400","live":false},
+      {"day":"Miércoles","title":"LA HORA MUSICAL","time":"12:00","image":"https://images.unsplash.com/photo-1571266028243-d220bc83b1c1?cs=srgb&fm=jpg&q=85&w=400","live":false}
+    ]
+  },
+  "podcasts": [
+    {"title":"Entrevista con artistas locales","duration":"32:00","color":"#047857","image":"https://images.unsplash.com/photo-1478737270239-2f02b77fc618?cs=srgb&fm=jpg&q=85&w=600"},
+    {"title":"Historias musicales de Valencia","duration":"45:20","color":"#ec4899","image":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?cs=srgb&fm=jpg&q=85&w=600"},
+    {"title":"Lo nuevo en la música","duration":"28:15","color":"#7c3aed","image":"https://images.unsplash.com/photo-1487180144351-b8472da7d491?cs=srgb&fm=jpg&q=85&w=600"}
+  ],
+  "videos": [
+    {"rank":1,"title":"Video Musical #1","artist":"Artista A","videoId":"dQw4w9WgXcQ"},
+    {"rank":2,"title":"Video Musical #2","artist":"Artista B","videoId":"9bZkp7q19f0"},
+    {"rank":3,"title":"Video Musical #3","artist":"Artista C","videoId":"kJQP7kiw5Fk"},
+    {"rank":4,"title":"Video Musical #4","artist":"Artista D","videoId":"OPf0YbXqDm0"},
+    {"rank":5,"title":"Video Musical #5","artist":"Artista E","videoId":"JGwWNGJdvx8"}
+  ],
+  "shorts": [
+    {"title":"Backstage del estudio","videoId":"dQw4w9WgXcQ","thumb":"https://images.unsplash.com/photo-1598387993441-a364f854c3e1?cs=srgb&fm=jpg&q=85&w=400"},
+    {"title":"Concierto en vivo","videoId":"9bZkp7q19f0","thumb":"https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?cs=srgb&fm=jpg&q=85&w=400"},
+    {"title":"Promo del programa","videoId":"kJQP7kiw5Fk","thumb":"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?cs=srgb&fm=jpg&q=85&w=400"},
+    {"title":"Artistas en cabina","videoId":"OPf0YbXqDm0","thumb":"https://images.unsplash.com/photo-1571266028243-d220bc83b1c1?cs=srgb&fm=jpg&q=85&w=400"},
+    {"title":"Detrás del éxito","videoId":"JGwWNGJdvx8","thumb":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?cs=srgb&fm=jpg&q=85&w=400"},
+    {"title":"Noche de fiesta","videoId":"3JZ_D3ELwOQ","thumb":"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?cs=srgb&fm=jpg&q=85&w=400"}
+  ],
+  "locutores": [
+    {"name":"LOCUTOR 1","role":"MAÑANAS","image":"https://images.unsplash.com/photo-1593697909683-bccb1b9e68a4?cs=srgb&fm=jpg&q=85&w=400"},
+    {"name":"LOCUTOR 2","role":"TARDES","image":"https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?cs=srgb&fm=jpg&q=85&w=400"},
+    {"name":"LOCUTOR 3","role":"NOCHES","image":"https://images.pexels.com/photos/36917946/pexels-photo-36917946.jpeg?cs=tinysrgb&dpr=2&h=650&w=940"},
+    {"name":"LOCUTOR 4","role":"FINES DE SEMANA","image":"https://images.unsplash.com/photo-1589903308904-1010c2294adc?cs=srgb&fm=jpg&q=85&w=400"}
+  ],
+  "partymix": [
+    {"rank":1,"artist":"ARTISTA 1","song":"Canción de la semana","image":"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?cs=srgb&fm=jpg&q=85&w=400","votes":0},
+    {"rank":2,"artist":"ARTISTA 2","song":"Mejor canción 2026","image":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?cs=srgb&fm=jpg&q=85&w=400","votes":0},
+    {"rank":3,"artist":"ARTISTA 3","song":"Éxito del momento","image":"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?cs=srgb&fm=jpg&q=85&w=400","votes":0}
+  ],
+  "news": {
+    "strip": [
+      {"title":"Bienvenida a nuestra nueva web","image":"https://images.unsplash.com/photo-1495020689067-958852a7765e?cs=srgb&fm=jpg&q=85&w=200"},
+      {"title":"Próximos eventos en vivo","image":"https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?cs=srgb&fm=jpg&q=85&w=200"},
+      {"title":"Sorteo musical de la semana","image":"https://images.unsplash.com/photo-1487180144351-b8472da7d491?cs=srgb&fm=jpg&q=85&w=200"}
+    ],
+    "main": {"category":"Música","title":"Gran concierto en Valencia este fin de semana","image":"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?cs=srgb&fm=jpg&q=85&w=800"},
+    "side": [
+      {"category":"Eventos","title":"Festival anual de música","image":"https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?cs=srgb&fm=jpg&q=85&w=400"},
+      {"category":"Artistas","title":"Entrevista exclusiva","image":"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?cs=srgb&fm=jpg&q=85&w=400"}
+    ]
+  },
+  "saludos": [
+    {"user":"Visitante","time":"hace 1 día","text":"¡Excelente radio!"},
+    {"user":"Oyente","time":"hace 2 días","text":"Sigan así, los escucho siempre."}
+  ],
+  "apps": [
+    {"label":"Android","icon":"📱","url":"#"},
+    {"label":"AppStore","icon":"🍎","url":"#"},
+    {"label":"Skill Alexa","icon":"🔊","url":"#"}
+  ],
+  "copyright": "Copyright © 2026 - Radio Party Valencia. Todos los derechos reservados"
+}
