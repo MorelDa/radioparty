@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Radio Party Valencia · La fiesta suena aquí 24/7</title>
+<meta name="description" content="Radio Party Valencia - La radio online 24/7 con la mejor música dance, house, pop y remixes desde Valencia.">
+<meta name="theme-color" content="#ff2e4d">
+
+<!-- Open Graph / Facebook / WhatsApp share preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Radio Party Valencia">
+<meta property="og:title" content="Radio Party Valencia · La fiesta suena aquí 24/7">
+<meta property="og:description" content="Escucha en directo la mejor música dance, house y remixes desde Valencia.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://radiopartyvalencia.example">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Radio Party Valencia">
+<meta name="twitter:description" content="La radio online 24/7 desde Valencia">
+<meta name="twitter:image" content="assets/og-image.jpg">
+
+<link rel="icon" href="icons/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="home">
+  <div class="header-inner">
+    <a href="#home" class="logo">
+      <img id="header-logo" src="" alt="Radio Party Valencia">
+    </a>
+    <nav class="main-nav" id="main-nav"></nav>
+    <div class="header-actions">
+      <button class="btn-share" id="btn-share" aria-label="Compartir"><span class="material-icons">share</span></button>
+      <button class="btn-install" id="btn-install" hidden><span class="material-icons">get_app</span> Instalar app</button>
+      <button class="btn-menu" id="btn-menu" aria-label="Menú"><span class="material-icons">menu</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-bottom" id="hero-bg-bottom"></div>
+    <div class="hero-bg-top" id="hero-bg-top"></div>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">EN DIRECTO · 24/7</div>
+    <h1 class="hero-title" id="hero-title">RADIO PARTY</h1>
+    <div class="hero-subtitle" id="hero-subtitle">VALENCIA</div>
+    <p class="hero-tag" id="hero-tag"></p>
+    <button class="btn-hero-play" id="btn-hero-play">
+      <span class="material-icons">play_arrow</span>
+      <span id="hero-cta">ESCUCHAR AHORA</span>
+    </button>
+  </div>
+  <div class="scroll-hint"><span class="material-icons">keyboard_arrow_down</span></div>
+</section>
+
+<!-- TODAY SHOWS -->
+<section class="section" id="shows">
+  <div class="container">
+    <h2 class="section-title">HOY EN DIRECTO</h2>
+    <div class="shows-grid" id="shows-grid"></div>
+  </div>
+</section>
+
+<!-- DISCOVER MORE -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">DESCUBRE MÁS</h2>
+    <div class="discover-grid" id="discover-grid"></div>
+  </div>
+</section>
+
+<!-- LATEST NEWS -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="news-layout">
+      <div class="news-main">
+        <h2 class="section-title">ÚLTIMAS NOTICIAS</h2>
+        <div class="news-grid" id="news-grid"></div>
+      </div>
+      <aside class="news-sidebar">
+        <h3 class="sidebar-title">TOP DE LA SEMANA</h3>
+        <ul class="hot-list" id="hot-list"></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section section-alt" id="schedule">
+  <div class="container">
+    <h2 class="section-title">PARRILLA SEMANAL</h2>
+    <div class="tabs" id="schedule-tabs"></div>
+    <div class="schedule-list" id="schedule-list"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container contact-wrap">
+    <div class="contact-info">
+      <h2 class="section-title small">CONTACTA CON NOSOTROS</h2>
+      <p id="contact-address"></p>
+      <p><span class="material-icons">mail</span> <a id="contact-email" href="#"></a></p>
+      <p><span class="material-icons">phone</span> <a id="contact-phone" href="#"></a></p>
+      <div class="social-row" id="social-row"></div>
+    </div>
+    <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); alert('Mensaje enviado (demo)');">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu email" required>
+      <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">ENVIAR</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-logo"><img id="footer-logo" src="" alt=""></div>
+    <nav class="footer-nav" id="footer-nav"></nav>
+    <p class="copyright" id="copyright"></p>
+  </div>
+</footer>
+
+<!-- BOTTOM PLAYER -->
+<div class="player-bar" id="player-bar">
+  <button class="player-play" id="player-play" aria-label="Play/Pause">
+    <span class="material-icons" id="player-play-icon">play_arrow</span>
+  </button>
+  <div class="player-info">
+    <img class="player-cover" id="player-cover" src="" alt="">
+    <div class="player-meta">
+      <div class="player-title"><span class="live-dot"></span> <span id="player-title">Radio Party Valencia</span></div>
+      <div class="player-artist" id="player-artist">Top Dance Radio</div>
+    </div>
+  </div>
+  <div class="player-volume">
+    <span class="material-icons" id="volume-icon">volume_up</span>
+    <input type="range" id="volume" min="0" max="100" value="80">
+  </div>
+</div>
+
+<!-- SHARE MODAL -->
+<div class="share-modal" id="share-modal">
+  <div class="share-inner">
+    <button class="share-close" id="share-close"><span class="material-icons">close</span></button>
+    <h3>Comparte Radio Party Valencia</h3>
+    <div class="share-buttons" id="share-buttons"></div>
+    <div class="share-copy">
+      <input type="text" id="share-url" readonly>
+      <button id="share-copy-btn">Copiar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close"><span class="material-icons">close</span></button>
+  <nav id="mobile-nav"></nav>
+</div>
+
+<audio id="radio-audio" preload="none"></audio>
+
+<script src="js/security.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pwa.js"></script>
+</body>
+</html>

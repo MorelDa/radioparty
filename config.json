@@ -1,0 +1,134 @@
+{
+  "site": {
+    "name": "RADIO PARTY VALENCIA",
+    "tagline": "Non-Stop Party Radio · Valencia",
+    "description": "Radio Party Valencia - La radio online 24/7 con la mejor música dance, house, pop y remixes desde Valencia.",
+    "url": "https://radiopartyvalencia.example",
+    "ogImage": "assets/og-image.jpg",
+    "favicon": "icons/favicon.png",
+    "logoHeader": "assets/logo.png",
+    "logoHero": "assets/logo-hero.png"
+  },
+  "theme": {
+    "colorAccent": "#ff2e4d",
+    "colorAccent2": "#ff8a00",
+    "colorBg": "#0b0b0f",
+    "colorBgAlt": "#141420",
+    "colorText": "#f5f5f7",
+    "colorTextMuted": "#8b8b96",
+    "fontHeading": "Anton, Impact, sans-serif",
+    "fontBody": "Inter, system-ui, sans-serif",
+    "heroBgTop": "assets/hero-top.png",
+    "heroBgBottom": "assets/hero-bottom.jpg"
+  },
+  "stream": {
+    "url": "https://miestacion.turadioonline.com.ar:8286/stream",
+    "stationName": "Radio Party Valencia",
+    "stationSubtitle": "Top Dance Radio",
+    "nowPlayingTitle": "En directo",
+    "nowPlayingArtist": "Radio Party Valencia",
+    "cover": "assets/cover.jpg"
+  },
+  "nav": [
+    { "label": "Inicio", "href": "#home" },
+    { "label": "Programas", "href": "#shows" },
+    { "label": "Noticias", "href": "#news" },
+    { "label": "Parrilla", "href": "#schedule" },
+    { "label": "Contacto", "href": "#contact" }
+  ],
+  "hero": {
+    "title": "RADIO PARTY",
+    "subtitle": "VALENCIA",
+    "cta": "ESCUCHAR AHORA"
+  },
+  "shows": [
+    { "title": "Morning Party", "host": "Con Dj Nico", "genre": "Dance", "time": "07:00 - 10:00", "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=70" },
+    { "title": "Latin Fever", "host": "Con Maria Ruiz", "genre": "Latino", "time": "10:00 - 13:00", "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=70" },
+    { "title": "Club Sessions", "host": "Con Dj Marco", "genre": "House", "time": "13:00 - 16:00", "image": "https://images.unsplash.com/photo-1571266028243-e4bb35f7ba64?w=800&q=70" },
+    { "title": "Beach Vibes", "host": "Con Laura Sun", "genre": "Chillout", "time": "16:00 - 19:00", "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=70" },
+    { "title": "Prime Time", "host": "Con Dj Kike", "genre": "Pop", "time": "19:00 - 22:00", "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=70" },
+    { "title": "Night Club", "host": "Con Dj Fernando", "genre": "EDM", "time": "22:00 - 02:00", "image": "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=70" }
+  ],
+  "discover": [
+    { "title": "PODCASTS", "subtitle": "Escucha programas pasados", "cta": "Ver ahora", "image": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=70" },
+    { "title": "NUESTROS DJs", "subtitle": "Los que están tras el micro", "cta": "Ver ahora", "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=70" },
+    { "title": "EVENTOS", "subtitle": "Descubre lo que viene", "cta": "Ver ahora", "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&q=70" }
+  ],
+  "news": [
+    { "title": "Radio Party Valencia estrena nueva parrilla de verano", "category": "Noticias", "excerpt": "Descubre las novedades de la programación con nuevos programas dedicados al verano y la fiesta.", "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=70", "date": "12 Julio 2025" },
+    { "title": "Los mejores hits del dance floor este verano", "category": "Música", "excerpt": "Un repaso a los temas que están sonando con más fuerza en las principales pistas de Valencia.", "image": "https://images.unsplash.com/photo-1571266028243-e4bb35f7ba64?w=1200&q=70", "date": "09 Julio 2025" },
+    { "title": "Entrevista exclusiva con Dj Marco", "category": "DJ", "excerpt": "Hablamos con Dj Marco sobre su nuevo álbum y sus próximas fechas por toda España.", "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=70", "date": "05 Julio 2025" },
+    { "title": "Festival Party Valencia 2025: fechas confirmadas", "category": "Eventos", "excerpt": "Ya tenemos las fechas oficiales y el cartel provisional del Festival Party Valencia 2025.", "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&q=70", "date": "02 Julio 2025" }
+  ],
+  "hotWeek": [
+    { "title": "Los remixes que están arrasando en TikTok", "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&q=70" },
+    { "title": "Guía para montar tu propia fiesta en casa", "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=200&q=70" },
+    { "title": "Los 10 clubes imprescindibles de Valencia", "image": "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=200&q=70" },
+    { "title": "Cómo empezar a pinchar en 2025", "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=200&q=70" }
+  ],
+  "schedule": {
+    "Lunes": [
+      { "time": "07:00 - 10:00", "title": "Morning Party", "host": "Dj Nico", "genre": "Dance", "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=70" },
+      { "time": "10:00 - 13:00", "title": "Latin Fever", "host": "Maria Ruiz", "genre": "Latino", "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=70" },
+      { "time": "13:00 - 16:00", "title": "Club Sessions", "host": "Dj Marco", "genre": "House", "image": "https://images.unsplash.com/photo-1571266028243-e4bb35f7ba64?w=400&q=70" },
+      { "time": "22:00 - 02:00", "title": "Night Club", "host": "Dj Fernando", "genre": "EDM", "image": "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400&q=70" }
+    ],
+    "Martes": [
+      { "time": "08:00 - 11:00", "title": "Wake Up Party", "host": "Dj Nico", "genre": "Dance", "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=70" },
+      { "time": "16:00 - 19:00", "title": "Beach Vibes", "host": "Laura Sun", "genre": "Chillout", "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=70" }
+    ],
+    "Miércoles": [
+      { "time": "10:00 - 13:00", "title": "Latin Fever", "host": "Maria Ruiz", "genre": "Latino", "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=70" },
+      { "time": "19:00 - 22:00", "title": "Prime Time", "host": "Dj Kike", "genre": "Pop", "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&q=70" }
+    ],
+    "Jueves": [
+      { "time": "13:00 - 16:00", "title": "Club Sessions", "host": "Dj Marco", "genre": "House", "image": "https://images.unsplash.com/photo-1571266028243-e4bb35f7ba64?w=400&q=70" },
+      { "time": "22:00 - 02:00", "title": "Night Club", "host": "Dj Fernando", "genre": "EDM", "image": "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400&q=70" }
+    ],
+    "Viernes": [
+      { "time": "19:00 - 22:00", "title": "Prime Time", "host": "Dj Kike", "genre": "Pop", "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&q=70" },
+      { "time": "22:00 - 04:00", "title": "Friday Fever", "host": "Dj Fernando", "genre": "EDM", "image": "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400&q=70" }
+    ],
+    "Sábado": [
+      { "time": "12:00 - 15:00", "title": "Weekend Warmup", "host": "Dj Nico", "genre": "Dance", "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=70" },
+      { "time": "22:00 - 06:00", "title": "Saturday Night Live", "host": "Dj Marco", "genre": "Club", "image": "https://images.unsplash.com/photo-1571266028243-e4bb35f7ba64?w=400&q=70" }
+    ],
+    "Domingo": [
+      { "time": "11:00 - 14:00", "title": "Sunday Chill", "host": "Laura Sun", "genre": "Chillout", "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=70" },
+      { "time": "18:00 - 22:00", "title": "Best of the Week", "host": "Dj Kike", "genre": "Mix", "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&q=70" }
+    ]
+  },
+  "sponsors": [
+    { "name": "Sponsor 1", "url": "#" },
+    { "name": "Sponsor 2", "url": "#" },
+    { "name": "Sponsor 3", "url": "#" },
+    { "name": "Sponsor 4", "url": "#" }
+  ],
+  "social": [
+    { "name": "Facebook", "icon": "facebook", "url": "#" },
+    { "name": "Instagram", "icon": "instagram", "url": "#" },
+    { "name": "Twitter", "icon": "twitter", "url": "#" },
+    { "name": "YouTube", "icon": "youtube", "url": "#" },
+    { "name": "WhatsApp", "icon": "whatsapp", "url": "#" }
+  ],
+  "contact": {
+    "email": "contacto@radiopartyvalencia.com",
+    "phone": "+34 900 000 000",
+    "address": "Valencia, España",
+    "whatsapp": "+34600000000"
+  },
+  "footer": {
+    "copyright": "© 2025 Radio Party Valencia - Todos los derechos reservados",
+    "links": [
+      { "label": "Inicio", "href": "#home" },
+      { "label": "Programas", "href": "#shows" },
+      { "label": "Contacto", "href": "#contact" },
+      { "label": "Política de privacidad", "href": "#" }
+    ]
+  },
+  "security": {
+    "blockRightClick": true,
+    "blockDevTools": true,
+    "blockTextSelection": false
+  }
+}
